@@ -1,44 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HUFS-Second-Major-Visualize
 
-## Available Scripts
+프로젝트 기간 : 2020.04.15 ~ 5월 안에 끝낼것  
+한국외대 이중전공 변경 여석 데이터 시각화 서비스
 
-In the project directory, you can run:
+## ✔️ 주요 기능
 
-### `npm start`
+- 설캠, 글캠의 학번별 이중전공 변경 여석을 시각화된 그래프를 통해 쉽게 확인할 수 있습니다.
+- **4학기 동안**의 이중전공 여석을 한 번에 볼 수 있어 관심있는 학과의 변경 여석 추이를 확인할 수 있습니다.
+- 여석이 없어 당장 이중전공 변경을 못하는 경우라도, 다음학기 변경 여석을 예상해볼 수 있습니다.
+- 인기있는 이중전공(상경계열, 미컴 등)들의 데이터를 따로 확인할 수 있습니다.
+- 여러 학과의 이중전공 여석을 비교해서 볼 수 있습니다.
+- 추가적으로 경영학과 이중전공 시험 합격률 데이터, 이중전공 신청 정보 등도 제공합니다.
+- **매학기 이중전공 변경 철마다 학교 공지사항에 올라오는 엑셀 파일이 넘 가독성 떨어져서 만들어봅니다**
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ⚓️ 의존성
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [`react.js`](https://github.com/facebook/react) + [`TypeScript`](https://github.com/microsoft/TypeScript)
+- 상태관리 : [`react-redux`](https://github.com/reduxjs/react-redux)
+- 엑셀파일 파싱 : [`sheet.js`](https://github.com/SheetJS/sheetjs)
+- 데이터 시각화 : [`react-d3-components`](https://github.com/codesuki/react-d3-components)
+- css-in-js : [미정]()
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧩 프로젝트 구조
