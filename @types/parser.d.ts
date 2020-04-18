@@ -1,18 +1,6 @@
-// 파서에서 사용하는 인터페이스
+// 이중전공 데이터가 포함된 Json의  타입
 
-export interface xlsxRowData {
-  id: number
-  major: string
-  data0: number
-  data1: number
-  data2: number
-  data3: number
-  classify: string
-  theme: string
-  notice: string
-}
-
-export interface majorInfo {
+type MajorInfo = {
   id: number
   name: string
   data: number[]
@@ -21,13 +9,8 @@ export interface majorInfo {
   notice: string | null
 }
 
-export interface parsingResult {
+export type ParsingResult = {
   id: number
   admission: number
   major: majorInfo[]
-}
-
-export interface parsingTarget {
-  sheetArr: xlsxRowData[]
-  sheetName: number
 }
