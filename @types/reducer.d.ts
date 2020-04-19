@@ -3,7 +3,13 @@ import { parsingResult } from './parser.d'
 
 export type State = {
   secondMajorData: parsingResult
+  admissionArr: number[]
 }
 
 // 액션값 그대로를 반환하는 타입형
 export type Action = ReturnType<typeof getDataByInput>
+
+export type getDataByInputPayload = {
+  campusName: string
+  admission: number
+}

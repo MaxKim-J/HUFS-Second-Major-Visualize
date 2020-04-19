@@ -16,11 +16,8 @@ export const getDataByInput = (campusName: string, admission: number) => ({
 
 //todo 3. 초기상태 정의
 const initialState: State = {
-  secondMajorData: {
-    id: 0,
-    admission: 0,
-    major: [],
-  },
+  secondMajorData: {},
+  admissionArr: [14, 15, 16, 17, 18, 19],
 }
 
 //todo 4. 리듀서 작성(export default)
