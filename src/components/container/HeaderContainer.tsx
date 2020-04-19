@@ -3,6 +3,7 @@ import Header from '../Header'
 import { getDataByInput } from '../../reducer/data'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../reducer'
+import admissionArr from '../../utils/admissionConfig'
 
 const HeaderContainer = () => {
   const data: any = useSelector((state: RootState) => state.data)
@@ -14,10 +15,7 @@ const HeaderContainer = () => {
   }
 
   return (
-    <Header
-      admissionArr={data.admissionArr}
-      onGetDataByInput={onGetDataByInput}
-    />
+    <Header admissionArr={admissionArr} onGetDataByInput={onGetDataByInput} />
   )
 }
 

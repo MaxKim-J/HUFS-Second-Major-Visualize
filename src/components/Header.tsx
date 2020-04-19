@@ -4,8 +4,7 @@ type headerProps = {
   admissionArr: number[]
   onGetDataByInput: (campusName: string, admission: number) => void
 }
-
-function Header({ admissionArr, onGetDataByInput }: headerProps) {
+const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   const [input, setInput] = useState({
     admission: 0,
     campusName: '',
@@ -14,6 +13,7 @@ function Header({ admissionArr, onGetDataByInput }: headerProps) {
   const handleInput = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     const { name, value } = event.target
     setInput({ ...input, [name]: value })
+    console.log(input)
   }
 
   return (
@@ -22,7 +22,13 @@ function Header({ admissionArr, onGetDataByInput }: headerProps) {
       <span className="header-inputs">
         <span className="header-input">
           <span className="header-input-title">캠퍼스</span>
-          <select className="header-input-select">
+          <select
+            className="header-input-select"
+            name="campusName"
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>): void =>
+              handleInput(e)
+            }
+          >
             <option value="">캠퍼스 선택</option>
             <option value="seoul">서울</option>
             <option value="global">글로벌</option>
@@ -46,7 +52,7 @@ function Header({ admissionArr, onGetDataByInput }: headerProps) {
         <span
           className="header-inputs-btn"
           onClick={() => {
-            const { admission, campusName } = input
+            const { campusName, admission } = input
             onGetDataByInput(campusName, admission)
           }}
         >

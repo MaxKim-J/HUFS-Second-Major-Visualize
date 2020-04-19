@@ -2,8 +2,7 @@
 import { parsingResult } from './parser.d'
 
 export type State = {
-  secondMajorData: parsingResult
-  admissionArr: number[]
+  majorData: parsingResult
 }
 
 // 액션값 그대로를 반환하는 타입형

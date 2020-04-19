@@ -16,8 +16,7 @@ export const getDataByInput = (campusName: string, admission: number) => ({
 
 //todo 3. 초기상태 정의
 const initialState: State = {
-  secondMajorData: {},
-  admissionArr: [14, 15, 16, 17, 18, 19],
+  majorData: {},
 }
 
 //todo 4. 리듀서 작성(export default)
@@ -28,10 +27,13 @@ const reducer = (state: State = initialState, action: Action) => {
       const { campusName, admission } = action.payload
       const target = require(`./data/${campusName}.json`)
       const searchedTarget: ParsingResult = target.find(
-        (elem: ParsingResult) => elem.admission === admission,
+        (elem: ParsingResult) => {
+          //! 여기 타입 왜이러지
+          return elem.admission == admission
+        },
       )
       return {
-        secondMajorData: searchedTarget,
+        majorData: searchedTarget,
       }
     default:
       return state
