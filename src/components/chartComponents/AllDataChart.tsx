@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MajorInfo } from '../../../@types/parser'
+import ChartTitle from '../ChartTitle'
+import ChartSearchCompare from '../ChartSearchCompare'
 
 type AllDataChartProps = {
   majorData: MajorInfo[]
 }
 
 const AllDataChart = ({ majorData }: AllDataChartProps) => {
+  const [selectedInfo, setSelctedInfo] = useState<MajorInfo[]>([])
+
+  const selectInfo = (newInfo: MajorInfo) => {
+    setSelctedInfo([...selectedInfo, newInfo])
+  }
+
   return (
     <div className="chart">
+      <ChartTitle title={'전체보기'} />
+      <ChartSearchCompare
+        majorData={majorData}
+        selectedInfo={selectedInfo}
+        setSelectedInfo={selectInfo}
+      />
       {majorData
         ? majorData.map(major => (
             <div>
