@@ -9,9 +9,9 @@ type ChartSearchCompareProps = {
   setSelectedInfo: (newInfo: MajorInfo) => void
 }
 
-// todo : useMajorArr 커스텀 훅 majorInfo[]넣으면
-// todo :  useSearch 커스텀 훅 => 인풋으로 정보 지정해주면 해당 majorInfo찾아줌
-// todo : useThemeSearch 커스텀 훅 =>
+// todo : useMajorInput 커스텀 훅 => 인풋: 단과대명(string) => 아웃풋 : 그 단과대에 매치되는 학과명(자료형 따로 구현)
+// todo : useSearch 커스텀 훅 => 인풋 : 학과명(string), majorInfo[] => 아웃풋: 학과명에 매치되는 majorInfo
+// todo : useThemeSearch 커스텀 훅 => 인풋 : theme이름, majorInfo[] => 아웃풋: 해당 theme에 해당하는 majorInfo가 들어있는 majorInfo[]
 
 const ChartSearchCompare = ({
   selectedInfo,
