@@ -4,6 +4,7 @@ type headerProps = {
   admissionArr: number[]
   onGetDataByInput: (campusName: string, admission: number) => void
 }
+
 const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   const [input, setInput] = useState({
     admission: 0,

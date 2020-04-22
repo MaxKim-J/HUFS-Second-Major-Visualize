@@ -15,8 +15,14 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
     setSelctedInfo([])
   }, [majorData])
 
-  const selectInfo = (newInfo: MajorInfo) => {
-    setSelctedInfo([...selectedInfo, newInfo])
+  const updateSelectedInfo = (action: string, info: MajorInfo) => {
+    if (action === 'set') {
+      setSelctedInfo([...selectedInfo, info])
+    } else {
+      setSelctedInfo(
+        [...selectedInfo].filter((major: MajorInfo) => major !== info),
+      )
+    }
   }
 
   return (
@@ -25,12 +31,12 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
       <ChartSearchCompare
         majorData={majorData}
         campusName={campusName}
-        setSelectedInfo={selectInfo}
+        selectedInfo={selectedInfo}
+        updateSelectedInfo={updateSelectedInfo}
       />
       {majorData
         ? selectedInfo.map((major: MajorInfo) => (
             <div>
-              <span>{major.name}</span>
               <span>{major.data}</span>
             </div>
           ))

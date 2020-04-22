@@ -3,18 +3,21 @@ import { MajorInfo } from '../../@types/parser.d'
 import { seoulCollege, globalCollege } from '../utils/collegeData'
 import updateMajorInput from '../utils/updateMajorInput'
 import searchMajor from '../utils/searchMajor'
+import ChartMajorBox from './ChartMajorBox'
 
 //todo theme로직이랑 같이 만들수 있으면 좋겠다
 
 type ChartSearchCompareProps = {
   campusName: string
   majorData: MajorInfo[]
-  setSelectedInfo: (newInfo: MajorInfo) => void
+  selectedInfo: MajorInfo[]
+  updateSelectedInfo: (action: string, info: MajorInfo) => void
 }
 
 const ChartSearchCompare = ({
   majorData,
-  setSelectedInfo,
+  updateSelectedInfo,
+  selectedInfo,
   campusName,
 }: ChartSearchCompareProps) => {
   const [collegeArr, setCollegeArr] = useState<string[]>([])
@@ -43,15 +46,18 @@ const ChartSearchCompare = ({
     setMajorArr(updateMajorInput(value, majorData))
   }
 
-  const updateSelectedInfo = () => {
+  const setSelectedInfo = () => {
     const value = input.major
     const selectedInfo = searchMajor(value, majorData)
-    setSelectedInfo(selectedInfo as MajorInfo)
+    updateSelectedInfo('set', selectedInfo as MajorInfo)
     setInput({ college: '', major: '' })
   }
 
-  // todo 인풋은 하나만 만들고 그 아래에 선택한 전공 블럭 만들어주기
-  // todo x누르면 블럭 사라지고 배열에서도 삭제되는걸로 => 하이어오더 컴포넌트로 만든다
+  const removeSelectedInfo = (major: string) => {
+    const selectedInfo = searchMajor(major, majorData)
+    updateSelectedInfo('remove', selectedInfo as MajorInfo)
+  }
+
   return (
     <div className="chart-search">
       <div className="chart-search-title"> 단과대/학과 선택하기</div>
@@ -94,13 +100,17 @@ const ChartSearchCompare = ({
           <span
             className="chart-input-btn"
             onClick={() => {
-              updateSelectedInfo()
+              setSelectedInfo()
             }}
           >
             추가
           </span>
         ) : null}
       </div>
+      {/*학과 박스*/}
+      {selectedInfo.map((major: MajorInfo) => (
+        <ChartMajorBox major={major.name} cancelFunction={removeSelectedInfo} />
+      ))}
     </div>
   )
 }
