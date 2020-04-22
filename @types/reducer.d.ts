@@ -3,6 +3,7 @@ import { parsingResult } from './parser.d'
 
 export type State = {
   majorData: parsingResult
+  campusName: string
 }
 
 // 액션값 그대로를 반환하는 타입형

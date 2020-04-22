@@ -7,7 +7,12 @@ const AllDataChartContainer = () => {
   const data: any = useSelector((state: RootState) => state.data)
   console.log(data)
 
-  return <AllDataChart majorData={data.majorData.major} />
+  return (
+    <AllDataChart
+      majorData={data.majorData.major}
+      campusName={data.campusName}
+    />
+  )
 }
 
 export default AllDataChartContainer

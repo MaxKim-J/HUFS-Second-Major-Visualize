@@ -17,6 +17,7 @@ export const getDataByInput = (campusName: string, admission: number) => ({
 //todo 3. 초기상태 정의
 const initialState: State = {
   majorData: {},
+  campusName: '',
 }
 
 //todo 4. 리듀서 작성(export default)
@@ -34,6 +35,7 @@ const reducer = (state: State = initialState, action: Action) => {
       )
       return {
         majorData: searchedTarget,
+        campusName: campusName,
       }
     default:
       return state

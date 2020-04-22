@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/parser'
 import ChartTitle from '../ChartTitle'
 import ChartSearchCompare from '../ChartSearchCompare'
 
 type AllDataChartProps = {
   majorData: MajorInfo[]
+  campusName: string
 }
 
-const AllDataChart = ({ majorData }: AllDataChartProps) => {
+const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
   const [selectedInfo, setSelctedInfo] = useState<MajorInfo[]>([])
+
+  useEffect(() => {
+    setSelctedInfo([])
+  }, [majorData])
 
   const selectInfo = (newInfo: MajorInfo) => {
     setSelctedInfo([...selectedInfo, newInfo])
@@ -19,13 +24,12 @@ const AllDataChart = ({ majorData }: AllDataChartProps) => {
       <ChartTitle title={'전체보기'} />
       <ChartSearchCompare
         majorData={majorData}
-        selectedInfo={selectedInfo}
+        campusName={campusName}
         setSelectedInfo={selectInfo}
       />
       {majorData
-        ? majorData.map(major => (
+        ? selectedInfo.map((major: MajorInfo) => (
             <div>
-              <span>{major.id}</span>
               <span>{major.name}</span>
               <span>{major.data}</span>
             </div>

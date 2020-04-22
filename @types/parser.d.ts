@@ -9,8 +9,9 @@ type MajorInfo = {
   notice: string | null
 }
 
-export type ParsingResult = {
+export interface ParsingResult {
   id: number
+  campus: string
   admission: number
   major: majorInfo[]
 }
