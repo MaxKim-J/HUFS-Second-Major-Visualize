@@ -1,6 +1,6 @@
 //! 덕스타입 리덕스
 import { State, Action } from '../../@types/reducer'
-import { ParsingResult } from '../../@types/parser.d'
+import { ParsingResult } from '../../@types/majorData'
 
 //todo 1. 액션 타입 정의
 const GETDATABYINPUT = 'data/GETDATABYINPUT' as const

@@ -1,4 +1,4 @@
-import { MajorInfo } from '../../@types/parser'
+import { MajorInfo } from '../../@types/majorData'
 
 const useMajorInput = (college: string, majorArr: MajorInfo[]): string[] => {
   const majors: MajorInfo[] = majorArr.filter(
