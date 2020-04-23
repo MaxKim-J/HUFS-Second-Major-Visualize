@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/parser'
 import ChartTitle from '../ChartTitle'
 import ChartSearchCompare from '../ChartSearchCompare'
+import ChartVisualBarChart from '../ChartVisualBarChart'
 
 type AllDataChartProps = {
   majorData: MajorInfo[]
@@ -17,7 +18,9 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
 
   const updateSelectedInfo = (action: string, info: MajorInfo) => {
     if (action === 'set') {
-      setSelctedInfo([...selectedInfo, info])
+      selectedInfo.length < 3
+        ? setSelctedInfo([...selectedInfo, info])
+        : alert('학과는 3개까지 선택할 수 있습니다.')
     } else {
       setSelctedInfo(
         [...selectedInfo].filter((major: MajorInfo) => major !== info),
@@ -34,13 +37,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
         selectedInfo={selectedInfo}
         updateSelectedInfo={updateSelectedInfo}
       />
-      {majorData
-        ? selectedInfo.map((major: MajorInfo) => (
-            <div>
-              <span>{major.data}</span>
-            </div>
-          ))
-        : null}
+      <ChartVisualBarChart selectedInfo={selectedInfo} />
     </div>
   )
   //todo <chartTitle 프롭:제목이 될 문자열 />

@@ -5,8 +5,6 @@ import updateMajorInput from '../utils/updateMajorInput'
 import searchMajor from '../utils/searchMajor'
 import ChartMajorBox from './ChartMajorBox'
 
-//todo theme로직이랑 같이 만들수 있으면 좋겠다
-
 type ChartSearchCompareProps = {
   campusName: string
   majorData: MajorInfo[]
@@ -61,6 +59,9 @@ const ChartSearchCompare = ({
   return (
     <div className="chart-search">
       <div className="chart-search-title"> 단과대/학과 선택하기</div>
+      <div className="chart-search-subtitle">
+        비교 학과는 3개까지 선택할 수 있습니다
+      </div>
       <div className="chart-search-input">
         {/* 단과대 인풋 */}
         <span>
