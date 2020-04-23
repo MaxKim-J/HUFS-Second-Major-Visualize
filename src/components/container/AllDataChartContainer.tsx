@@ -5,7 +5,6 @@ import { RootState } from '../../reducer'
 
 const AllDataChartContainer = () => {
   const data: any = useSelector((state: RootState) => state.data)
-  console.log(data)
 
   return (
     <AllDataChart
