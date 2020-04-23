@@ -2,7 +2,7 @@ import React from 'react'
 
 type ChartMajorBoxProps = {
   major: string
-  cancelFunction: ((major: string) => void) | undefined
+  cancelFunction?: (major: string) => void
 }
 
 const ChartMajorBox = ({ major, cancelFunction }: ChartMajorBoxProps) => {

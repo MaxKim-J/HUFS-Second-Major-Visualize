@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderContainer from './components/container/HeaderContainer'
 import AllDataChartContainer from './components/container/AllDataChartContainer'
+import ThemeDataChartContainer from './components/container/ThemeDataChartContainer'
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <HeaderContainer />
       {/* todo 조건부 랜더링 - 스토어에 데이터 없을때 차트 보여주지 않기 */}
       <AllDataChartContainer />
+      <ThemeDataChartContainer />
     </div>
   )
 }

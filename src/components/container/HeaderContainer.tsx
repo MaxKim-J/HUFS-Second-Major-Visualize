@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Header'
 import { getDataByInput } from '../../reducer/data'
 import { useDispatch } from 'react-redux'
-import admissionArr from '../../utils/admissionConfig'
+import admissionArr from '../../config/admissions'
 
 const HeaderContainer = () => {
   const dispatch = useDispatch()

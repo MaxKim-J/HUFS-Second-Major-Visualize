@@ -1,18 +1,18 @@
 import React from 'react'
-import AllDataChart from '../chartComponents/AllDataChart'
+import ThemeDataChart from '../chartComponents/ThemeDataChart'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../reducer'
 import { State } from '../../../@types/reducer.d'
 
-const AllDataChartContainer = () => {
+const ThemeDataChartContainer = () => {
   const data: State = useSelector((state: RootState) => state.data)
 
   return (
-    <AllDataChart
+    <ThemeDataChart
       majorData={data.majorData.major}
       campusName={data.campusName}
     />
   )
 }
 
-export default AllDataChartContainer
+export default ThemeDataChartContainer

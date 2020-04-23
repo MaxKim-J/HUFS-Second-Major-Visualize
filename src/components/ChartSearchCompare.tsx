@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../@types/parser.d'
-import { seoulCollege, globalCollege } from '../utils/collegeData'
+import { seoulCollege, globalCollege } from '../config/colleges'
 import updateMajorInput from '../utils/updateMajorInput'
 import searchMajor from '../utils/searchMajor'
 import ChartMajorBox from './ChartMajorBox'
