@@ -1,5 +1,5 @@
 // 리덕스에 쓰이는 인터페이스
-import { parsingResult } from './parser.d'
+import { parsingResult } from './majorData'
 
 export type State = {
   majorData: parsingResult

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../../@types/parser'
+import { MajorInfo } from '../../../@types/majorData'
 import ChartTitle from '../ChartTitle'
 import ChartVisualBarChart from '../ChartVisualBarChart'
 import ChartNotice from '../ChartNotice'

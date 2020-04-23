@@ -1,6 +1,6 @@
 // 이중전공 데이터가 포함된 Json의  타입
 
-type MajorInfo = {
+export type MajorInfo = {
   id: number
   name: string
   data: number[]
@@ -9,7 +9,7 @@ type MajorInfo = {
   notice: string | null
 }
 
-export interface ParsingResult {
+export type ParsingResult = {
   id: number
   campus: string
   admission: number
