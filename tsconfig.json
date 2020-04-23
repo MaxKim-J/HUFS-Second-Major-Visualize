@@ -15,5 +15,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src", "src/utils/parser"]
+  "include": ["src", "utils/parser"]
 }
