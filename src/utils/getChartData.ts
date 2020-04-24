@@ -1,6 +1,11 @@
 //* 선택된 전공 데이터를 차트 컴포넌트가 요구하는 형식으로 바꾸는 함수
 
-import { MajorInfo, ChartData, ChartSection } from '../../@types/majorData'
+import {
+  MajorInfo,
+  ChartData,
+  ChartSection,
+  ChartDirection,
+} from '../../@types/majorData'
 import { semester, chartColor } from '../config/chart'
 
 const chartValueValid = (value: number) => {
@@ -19,7 +24,14 @@ const chartValueValid = (value: number) => {
 
 const getMajorChartData = (selectedInfo: MajorInfo[]): ChartData => {
   let chartSection: ChartSection[] = []
-  const majors: string[] = selectedInfo.map((major: MajorInfo) => major.name)
+  let direction: ChartDirection[] = []
+
+  selectedInfo.forEach((major: MajorInfo, idx: number) => {
+    direction = [
+      ...direction,
+      { major: major.name, color: chartColor[idx] } as ChartDirection,
+    ]
+  })
 
   semester.forEach((elem: string, idx: number) => {
     chartSection = [...chartSection, { name: elem } as ChartSection]
@@ -28,7 +40,7 @@ const getMajorChartData = (selectedInfo: MajorInfo[]): ChartData => {
     })
   })
 
-  const result: ChartData = { majors: majors, chart: chartSection }
+  const result: ChartData = { direction: direction, chart: chartSection }
   return result
 }
 

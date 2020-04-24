@@ -1,8 +1,13 @@
 // 이중전공 데이터가 포함된 Json의  타입
 
 export type ChartData = {
-  majors: string[]
+  direction: chartDirection[]
   chart: ChartSection[]
+}
+
+export type ChartDirection = {
+  major: string
+  color: string
 }
 
 export type ChartSection = {

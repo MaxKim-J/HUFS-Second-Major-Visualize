@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo, ChartData } from '../../@types/majorData'
+import { MajorInfo, ChartData, ChartDirection } from '../../@types/majorData'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import getChartData from '../utils/getChartData'
 
@@ -9,7 +9,7 @@ type ChartVisualBarChartProps = {
 
 const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
   const [chartData, setChartData] = useState<ChartData>({
-    majors: [],
+    direction: [],
     chart: [],
   })
 
@@ -17,7 +17,7 @@ const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
     setChartData(getChartData(selectedInfo))
   }, [selectedInfo])
 
-  const { majors, chart } = chartData
+  const { direction, chart } = chartData
 
   return (
     <div className="chart-bar-chart">
@@ -31,8 +31,8 @@ const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip isAnimationActive={false} />
-        {majors.map((major: string) => (
-          <Bar dataKey={major} />
+        {direction.map((bar: ChartDirection) => (
+          <Bar dataKey={bar.major} fill={bar.color} />
         ))}
       </BarChart>
     </div>
