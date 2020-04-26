@@ -22,7 +22,7 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
   }
 
   return (
-    <div className="chart">
+    <>
       <ChartTitle title={'테마보기'} />
       <ChartSearchSelect
         campusName={campusName}
@@ -31,7 +31,7 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
       />
       <ChartVisualBarChart selectedInfo={selectedThemeInfo} />
       <ChartNotice selectedInfo={selectedThemeInfo} />
-    </div>
+    </>
   )
 }
 

@@ -30,7 +30,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
   }
 
   return (
-    <div className="chart">
+    <>
       <ChartTitle title={'전체보기'} />
       <ChartSearchCompare
         majorData={majorData}
@@ -40,7 +40,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
       />
       <ChartVisualBarChart selectedInfo={selectedInfo} />
       <ChartNotice selectedInfo={selectedInfo} />
-    </div>
+    </>
   )
 }
 

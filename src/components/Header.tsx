@@ -18,7 +18,7 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   }
 
   return (
-    <div className="header">
+    <>
       <span className="header-title">외대 이중전공 DB</span>
       <span className="header-inputs">
         <span className="header-input">
@@ -60,7 +60,7 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
           확인
         </span>
       </span>
-    </div>
+    </>
   )
 }
 
