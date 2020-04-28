@@ -17,8 +17,8 @@
 
 - [`react.js`](https://github.com/facebook/react) + [`TypeScript`](https://github.com/microsoft/TypeScript)
 - 상태관리 : [`react-redux`](https://github.com/reduxjs/react-redux)
-- 엑셀파일 파싱 : [`sheet.js`](https://github.com/SheetJS/sheetjs)
-- 데이터 시각화 : [`react-d3-components`](https://github.com/codesuki/react-d3-components)
-- css-in-js : [미정]()
+- 엑셀파일 파싱 : [`xlsx`](https://github.com/SheetJS/sheetjs)
+- 데이터 시각화 : [`recharts`](https://github.com/recharts/recharts)
+- css-in-js : [styled-component](https://github.com/styled-components/styled-components)
 
 ## 🧩 프로젝트 구조
