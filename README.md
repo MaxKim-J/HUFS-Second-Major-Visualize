@@ -19,6 +19,6 @@
 - 상태관리 : [`react-redux`](https://github.com/reduxjs/react-redux)
 - 엑셀파일 파싱 : [`xlsx`](https://github.com/SheetJS/sheetjs)
 - 데이터 시각화 : [`recharts`](https://github.com/recharts/recharts)
-- css-in-js : [styled-component](https://github.com/styled-components/styled-components)
+- css-in-js : [`styled-components`](https://github.com/styled-components/styled-components)
 
 ## 🧩 프로젝트 구조
