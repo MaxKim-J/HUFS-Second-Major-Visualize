@@ -8,6 +8,7 @@ type AppLayoutContainerProps = {
   allDataChart: JSX.Element
   themeDataChart: JSX.Element
   defaultContent: JSX.Element
+  footer?: JSX.Element
 }
 
 const AppLayoutContainer = ({
@@ -15,9 +16,9 @@ const AppLayoutContainer = ({
   allDataChart,
   themeDataChart,
   defaultContent,
+  footer,
 }: AppLayoutContainerProps) => {
   const data: State = useSelector((state: RootState) => state.data)
-  console.log(data)
 
   return (
     <div className="App">
@@ -32,7 +33,7 @@ const AppLayoutContainer = ({
           <div className="default">{defaultContent}</div>
         )}
       </div>
-      <div className="footer">이것은 푸터</div>
+      <div className="footer">{footer}</div>
     </div>
   )
 }
