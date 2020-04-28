@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../reducer'
 import { State } from '../../../@types/reducer.d'
+import styled from 'styled-components'
 
 type AppLayoutContainerProps = {
   header: JSX.Element
@@ -10,6 +11,17 @@ type AppLayoutContainerProps = {
   defaultContent: JSX.Element
   footer?: JSX.Element
 }
+
+const Content = styled.div`
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+`
+
+const Header = styled.div`
+  position: fixed;
+`
 
 const AppLayoutContainer = ({
   header,
@@ -21,9 +33,9 @@ const AppLayoutContainer = ({
   const data: State = useSelector((state: RootState) => state.data)
 
   return (
-    <div className="App">
-      <div className="header">{header}</div>
-      <div className="content">
+    <>
+      <Header>{header}</Header>
+      <Content>
         {data.campusName ? (
           <>
             <div className="chart">{allDataChart}</div>
@@ -32,9 +44,9 @@ const AppLayoutContainer = ({
         ) : (
           <div className="default">{defaultContent}</div>
         )}
-      </div>
+      </Content>
       <div className="footer">{footer}</div>
-    </div>
+    </>
   )
 }
 

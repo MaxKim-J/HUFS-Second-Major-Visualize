@@ -9,7 +9,6 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <>
-      <h1>한국외대 이중전공 변경 여석 데이터 시각화 서비스</h1>
       <AppLayoutContainer
         header={<HeaderContainer />}
         allDataChart={<AllDataChartContainer />}
