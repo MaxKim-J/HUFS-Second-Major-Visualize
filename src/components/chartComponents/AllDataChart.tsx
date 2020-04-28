@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../../@types/parser'
+import { MajorInfo } from '../../../@types/majorData'
 import ChartTitle from '../ChartTitle'
 import ChartSearchCompare from '../ChartSearchCompare'
 import ChartVisualBarChart from '../ChartVisualBarChart'
@@ -30,7 +30,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
   }
 
   return (
-    <div className="chart">
+    <>
       <ChartTitle title={'전체보기'} />
       <ChartSearchCompare
         majorData={majorData}
@@ -40,7 +40,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
       />
       <ChartVisualBarChart selectedInfo={selectedInfo} />
       <ChartNotice selectedInfo={selectedInfo} />
-    </div>
+    </>
   )
 }
 

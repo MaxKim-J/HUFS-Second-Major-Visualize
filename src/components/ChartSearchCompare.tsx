@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../@types/parser.d'
+import { MajorInfo } from '../../@types/majorData'
 import { seoulCollege, globalCollege } from '../config/colleges'
 import updateMajorInput from '../utils/updateMajorInput'
 import searchMajor from '../utils/searchMajor'

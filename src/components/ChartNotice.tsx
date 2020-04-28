@@ -1,5 +1,5 @@
 import React from 'react'
-import { MajorInfo } from '../../@types/parser.d'
+import { MajorInfo } from '../../@types/majorData'
 
 type ChartNoticeProps = {
   selectedInfo: MajorInfo[]

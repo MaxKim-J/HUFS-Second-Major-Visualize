@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../@types/parser.d'
+import { MajorInfo } from '../../@types/majorData'
 import { seoulTheme, globalTheme } from '../config/themes'
 import ChartMajorBox from './ChartMajorBox'
 import searchTheme from '../utils/searchTheme'
