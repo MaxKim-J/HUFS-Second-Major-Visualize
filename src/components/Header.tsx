@@ -1,9 +1,32 @@
 import React, { useState } from 'react'
+import { InputBtn, InputSelect } from '../style/styledComponents/input'
+import styled from 'styled-components'
 
 type headerProps = {
   admissionArr: number[]
   onGetDataByInput: (campusName: string, admission: number) => void
 }
+
+const HeaderTitle = styled.span`
+  font-size: 2rem;
+  font-family: Recko;
+  color: #002a48;
+`
+
+const HeaderInputs = styled.div`
+  margin-top: 0.4rem;
+`
+
+const HeaderInputSelect = styled.select`
+  font-size: 0.8rem;
+`
+
+const HeaderInputTitle = styled.span`
+  margin-right: 0.3rem;
+  margin-top: 0.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+`
 
 const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   const [input, setInput] = useState({
@@ -19,11 +42,11 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
 
   return (
     <>
-      <span className="header-title">외대 이중전공 DB</span>
-      <span className="header-inputs">
-        <span className="header-input">
-          <span className="header-input-title">캠퍼스</span>
-          <select
+      <HeaderTitle>한국외대 이중전공 DB</HeaderTitle>
+      <HeaderInputs>
+        <InputSelect>
+          <HeaderInputTitle>캠퍼스</HeaderInputTitle>
+          <HeaderInputSelect
             className="header-input-select"
             name="campusName"
             onChange={(e: React.ChangeEvent<HTMLSelectElement>): void =>
@@ -33,11 +56,11 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
             <option value="">캠퍼스 선택</option>
             <option value="seoul">서울</option>
             <option value="global">글로벌</option>
-          </select>
-        </span>
-        <span className="header-input">
-          <span className="header-input-title">학번</span>
-          <select
+          </HeaderInputSelect>
+        </InputSelect>
+        <InputSelect>
+          <HeaderInputTitle>학번</HeaderInputTitle>
+          <HeaderInputSelect
             className="header-input-select"
             name="admission"
             onChange={(e: React.ChangeEvent<HTMLSelectElement>): void =>
@@ -48,18 +71,17 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
             {admissionArr.map(admission => (
               <option value={admission}>{admission}</option>
             ))}
-          </select>
-        </span>
-        <span
-          className="header-inputs-btn"
+          </HeaderInputSelect>
+        </InputSelect>
+        <InputBtn
           onClick={() => {
             const { campusName, admission } = input
             onGetDataByInput(campusName, admission)
           }}
         >
           확인
-        </span>
-      </span>
+        </InputBtn>
+      </HeaderInputs>
     </>
   )
 }

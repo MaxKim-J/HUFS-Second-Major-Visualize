@@ -5,8 +5,8 @@ import ThemeDataChartContainer from './components/container/ThemeDataChartContai
 import AppLayoutContainer from './components/container/AppLayoutContainer'
 import DefaultContent from './components/DefaultContent'
 import Footer from './components/Footer'
-import '../src/font.css'
-import '../src/global.css'
+import '../src/style/font.css'
+import '../src/style/global.css'
 import styled from 'styled-components'
 
 const AppWrap = styled.div`
@@ -17,22 +17,24 @@ const AppWrap = styled.div`
     width: 90%;
   }
 
-  @media screen and (max-width: 640px) {
-    width: 100%;
+  @media screen and (max-width: 360px) {
+    width: 95%;
   }
 `
 
 const App = () => {
   return (
-    <AppWrap>
-      <AppLayoutContainer
-        header={<HeaderContainer />}
-        allDataChart={<AllDataChartContainer />}
-        themeDataChart={<ThemeDataChartContainer />}
-        defaultContent={<DefaultContent />}
-        footer={<Footer />}
-      />
-    </AppWrap>
+    <>
+      <AppWrap>
+        <AppLayoutContainer
+          header={<HeaderContainer />}
+          allDataChart={<AllDataChartContainer />}
+          themeDataChart={<ThemeDataChartContainer />}
+          defaultContent={<DefaultContent />}
+          footer={<Footer />}
+        />
+      </AppWrap>
+    </>
   )
 }
 

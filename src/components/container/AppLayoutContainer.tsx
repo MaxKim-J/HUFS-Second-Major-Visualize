@@ -13,14 +13,32 @@ type AppLayoutContainerProps = {
 }
 
 const Content = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 5rem;
+  padding-top: 7rem;
   padding-bottom: 4rem;
+  margin: 0 auto;
+  width: inherit;
+  min-height: 90vh;
 `
 
 const Header = styled.div`
   position: fixed;
+  display: flex;
+  padding-top: 2rem;
+  width: inherit;
+  justify-content: space-between;
+  background: #ffffff;
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+`
+
+const Footer = styled.div`
+  width: initial;
+  background-color: #f6f9fc;
+  padding: 2rem 0;
 `
 
 const AppLayoutContainer = ({
@@ -45,7 +63,7 @@ const AppLayoutContainer = ({
           <div className="default">{defaultContent}</div>
         )}
       </Content>
-      <div className="footer">{footer}</div>
+      <Footer>{footer}</Footer>
     </>
   )
 }
