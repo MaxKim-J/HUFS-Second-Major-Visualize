@@ -5,7 +5,7 @@ export const ChartMajorBoxes = styled.div`
   flex-wrap: wrap;
   width: 80%;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 770px) {
     width: 90%;
   }
 

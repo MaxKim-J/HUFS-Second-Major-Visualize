@@ -13,7 +13,7 @@ const AppWrap = styled.div`
   width: 80%;
   margin: 0 auto;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 770px) {
     width: 90%;
   }
 

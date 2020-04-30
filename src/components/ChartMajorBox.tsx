@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Emoji from './Emoji'
 
 type ChartMajorBoxProps = {
   major: string
@@ -16,17 +17,21 @@ const MajorBox = styled.span`
   cursor: pointer;
 `
 
+const MajorBoxCloseBtn = styled.span`
+  margin-left: 1rem;
+`
+
 const ChartMajorBox = ({ major, cancelFunction }: ChartMajorBoxProps) => {
   return (
     <MajorBox>
       <span>{major}</span>
       {cancelFunction ? (
-        <span
+        <MajorBoxCloseBtn
           className="chart-major-box-close"
           onClick={() => cancelFunction(major)}
         >
-          &nbsp; &nbsp; ❌
-        </span>
+          <Emoji label="cancel" emoji="❌" />
+        </MajorBoxCloseBtn>
       ) : null}
     </MajorBox>
   )

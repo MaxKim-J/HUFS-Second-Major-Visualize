@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Emoji from './Emoji'
 
 const FooterWrap = styled.div`
   width: initial;
@@ -58,7 +59,10 @@ const Footer = () => {
   return (
     <FooterWrap>
       <FooterContent>
-        <FooterIntroduce>Developed by 🧑🏻‍💻Max Kim</FooterIntroduce>
+        <FooterIntroduce>
+          Developed by <Emoji label="max" emoji="🧑🏻‍💻" />
+          Max Kim
+        </FooterIntroduce>
         <div>자바스크립트 개발자, 융소 이중하는 고학번</div>
         <FooterSection>
           <FooterIcons>

@@ -19,7 +19,7 @@ export const InputBoxes = styled.div`
   display: flex;
   align-content: center;
   flex-wrap: wrap;
-  @media screen and (max-width: 380px) {
-    justify-content: space-between;
+  @media screen and (max-width: 770px) {
+    justify-content: center;
   }
 `
