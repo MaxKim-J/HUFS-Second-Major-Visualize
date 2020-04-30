@@ -35,7 +35,8 @@ const FooterIcon = styled.div`
 `
 
 const FooterCopyrigths = styled.div`
-  font-size: 0.4rem;
+  font-size: 0.5rem;
+  margin-top: 0.7rem;
 `
 
 const FooterIntroduce = styled.div`
@@ -48,6 +49,9 @@ const FooterSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  @media screen and (max-width: 380px) {
+    flex-direction: column;
+  }
 `
 
 const Footer = () => {
@@ -84,7 +88,7 @@ const Footer = () => {
             </FooterIcon>
           </FooterIcons>
           <FooterCopyrigths>
-            HUFS Second Major Visaulize © Max Kim. 2020
+            HUFS Second Major DB © Max Kim. 2020
           </FooterCopyrigths>
         </FooterSection>
       </FooterContent>

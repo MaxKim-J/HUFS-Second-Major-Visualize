@@ -3,6 +3,7 @@ import { MajorInfo } from '../../@types/majorData'
 import { seoulTheme, globalTheme } from '../config/themes'
 import ChartMajorBox from './ChartMajorBox'
 import searchTheme from '../utils/searchTheme'
+import { ChartMajorBoxes } from '../style/styledComponents/majorBoxes'
 
 type ChartSearchSelectProps = {
   campusName: string
@@ -32,12 +33,13 @@ const ChartSearchSelect = ({
 
   return (
     <div className="chart-search">
-      <div className="chart-search-title"> 테마 선택하기</div>
-      {themeArr.map((theme: string) => (
-        <span onClick={() => setSelectedThemeInfo(theme)}>
-          <ChartMajorBox major={theme} />
-        </span>
-      ))}
+      <ChartMajorBoxes>
+        {themeArr.map((theme: string) => (
+          <span onClick={() => setSelectedThemeInfo(theme)}>
+            <ChartMajorBox major={theme} />
+          </span>
+        ))}
+      </ChartMajorBoxes>
     </div>
   )
 }

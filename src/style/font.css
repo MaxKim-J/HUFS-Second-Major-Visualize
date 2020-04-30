@@ -6,12 +6,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-/* 정고딕 */
-@font-face {
-  font-family: 'Noto Sans KR';
-  src: url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700,900&display=swap&subset=korean')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}

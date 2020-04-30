@@ -28,10 +28,14 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
       )
     }
   }
-
   return (
     <>
-      <ChartTitle title={'전체보기'} />
+      <ChartTitle
+        title={'전체보기'}
+        subTitle={
+          '선택한 캠퍼스, 학번에 해당하는 이중전공 여석을 조회합니다(비교 학과는 3개까지 선택할 수 있습니다)'
+        }
+      />
       <ChartSearchCompare
         majorData={majorData}
         campusName={campusName}

@@ -4,6 +4,12 @@ import { seoulCollege, globalCollege } from '../config/colleges'
 import updateMajorInput from '../utils/updateMajorInput'
 import searchMajor from '../utils/searchMajor'
 import ChartMajorBox from './ChartMajorBox'
+import { ChartMajorBoxes } from '../style/styledComponents/majorBoxes'
+import {
+  InputSelect,
+  InputBtn,
+  InputBoxes,
+} from '../style/styledComponents/input'
 
 type ChartSearchCompareProps = {
   campusName: string
@@ -58,13 +64,9 @@ const ChartSearchCompare = ({
 
   return (
     <div className="chart-search">
-      <div className="chart-search-title"> 단과대/학과 선택하기</div>
-      <div className="chart-search-subtitle">
-        비교 학과는 3개까지 선택할 수 있습니다
-      </div>
-      <div className="chart-search-input">
+      <InputBoxes>
         {/* 단과대 인풋 */}
-        <span>
+        <InputSelect>
           <select
             className="chart-input-select"
             name="college"
@@ -79,10 +81,10 @@ const ChartSearchCompare = ({
               <option value={college}>{college}</option>
             ))}
           </select>
-        </span>
+        </InputSelect>
 
         {/* 학과 인풋 */}
-        <span>
+        <InputSelect>
           <select
             className="chart-input-select"
             name="major"
@@ -96,22 +98,27 @@ const ChartSearchCompare = ({
               <option value={major}>{major}</option>
             ))}
           </select>
-        </span>
+        </InputSelect>
         {input.major ? (
-          <span
+          <InputBtn
             className="chart-input-btn"
             onClick={() => {
               setSelectedInfo()
             }}
           >
             추가
-          </span>
+          </InputBtn>
         ) : null}
-      </div>
+      </InputBoxes>
       {/*학과 박스*/}
-      {selectedInfo.map((major: MajorInfo) => (
-        <ChartMajorBox major={major.name} cancelFunction={removeSelectedInfo} />
-      ))}
+      <ChartMajorBoxes>
+        {selectedInfo.map((major: MajorInfo) => (
+          <ChartMajorBox
+            major={major.name}
+            cancelFunction={removeSelectedInfo}
+          />
+        ))}
+      </ChartMajorBoxes>
     </div>
   )
 }

@@ -13,9 +13,7 @@ const HeaderTitle = styled.span`
   color: #002a48;
 `
 
-const HeaderInputs = styled.div`
-  margin-top: 0.4rem;
-`
+const HeaderInputs = styled.div``
 
 const HeaderInputSelect = styled.select`
   font-size: 0.8rem;

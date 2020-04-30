@@ -13,3 +13,6 @@ export const InputSelect = styled.span`
   margin-right: 1.2rem;
   font-size: 1.3rem;
 `
+export const InputBoxes = styled.div`
+  margin-bottom: 1rem;
+`

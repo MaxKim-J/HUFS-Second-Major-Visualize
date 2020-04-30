@@ -16,9 +16,11 @@ const Header = styled.div`
   position: fixed;
   display: flex;
   padding-top: 2rem;
+  padding-bottom: 0.5rem;
   width: inherit;
   justify-content: space-between;
   background: #ffffff;
+  z-index: 999;
 
   @media screen and (max-width: 750px) {
     display: flex;
@@ -32,6 +34,13 @@ const Content = styled.div`
   margin: 0 auto;
   width: inherit;
   min-height: 90vh;
+`
+
+const Chart = styled.div`
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 2px solid #f4f4f4;
+  border-radius: 20px;
 `
 
 const AppLayoutContainer = ({
@@ -48,8 +57,8 @@ const AppLayoutContainer = ({
       <Content>
         {data.campusName ? (
           <>
-            <div className="chart">{allDataChart}</div>
-            <div className="chart">{themeDataChart}</div>
+            <Chart>{allDataChart}</Chart>
+            <Chart>{themeDataChart}</Chart>
           </>
         ) : (
           <div className="default">{defaultContent}</div>

@@ -23,7 +23,12 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
 
   return (
     <>
-      <ChartTitle title={'테마보기'} />
+      <ChartTitle
+        title={'테마보기'}
+        subTitle={
+          '이중전공 데이터를 테마별로 모아봤습니다. 테마를 선택해 주세요'
+        }
+      />
       <ChartSearchSelect
         campusName={campusName}
         majorData={majorData}
