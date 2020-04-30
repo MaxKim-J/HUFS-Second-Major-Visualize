@@ -57,8 +57,8 @@ const AppLayoutContainer = ({
       <Content>
         {data.campusName ? (
           <>
-            <Chart>{allDataChart}</Chart>
             <Chart>{themeDataChart}</Chart>
+            <Chart>{allDataChart}</Chart>
           </>
         ) : (
           <div className="default">{defaultContent}</div>

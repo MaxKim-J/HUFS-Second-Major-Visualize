@@ -4,6 +4,7 @@ import Emoji from './Emoji'
 
 type ChartMajorBoxProps = {
   major: string
+  emoji?: string
   cancelFunction?: (major: string) => void
 }
 
@@ -21,10 +22,19 @@ const MajorBoxCloseBtn = styled.span`
   margin-left: 1rem;
 `
 
-const ChartMajorBox = ({ major, cancelFunction }: ChartMajorBoxProps) => {
+const MajorBoxTitle = styled.span`
+  font-size: 0.8rem;
+`
+
+const ChartMajorBox = ({
+  major,
+  emoji,
+  cancelFunction,
+}: ChartMajorBoxProps) => {
   return (
     <MajorBox>
-      <span>{major}</span>
+      {emoji ? <Emoji label="logo" emoji={emoji} /> : null}
+      <MajorBoxTitle>{major}</MajorBoxTitle>
       {cancelFunction ? (
         <MajorBoxCloseBtn
           className="chart-major-box-close"
