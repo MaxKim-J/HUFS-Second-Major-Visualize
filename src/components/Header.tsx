@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
-import { InputBtn, InputSelect } from '../style/styledComponents/input'
+import {
+  InputBtn,
+  InputSelect,
+  InputBoxes,
+} from '../style/styledComponents/input'
 import styled from 'styled-components'
 
 type headerProps = {
@@ -12,8 +16,6 @@ const HeaderTitle = styled.span`
   font-family: Recko;
   color: #002a48;
 `
-
-const HeaderInputs = styled.div``
 
 const HeaderInputSelect = styled.select`
   font-size: 0.8rem;
@@ -41,7 +43,7 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   return (
     <>
       <HeaderTitle>한국외대 이중전공 DB</HeaderTitle>
-      <HeaderInputs>
+      <InputBoxes>
         <InputSelect>
           <HeaderInputTitle>캠퍼스</HeaderInputTitle>
           <HeaderInputSelect
@@ -77,9 +79,9 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
             onGetDataByInput(campusName, admission)
           }}
         >
-          확인
+          시작
         </InputBtn>
-      </HeaderInputs>
+      </InputBoxes>
     </>
   )
 }
