@@ -31,9 +31,9 @@ const App = () => {
           allDataChart={<AllDataChartContainer />}
           themeDataChart={<ThemeDataChartContainer />}
           defaultContent={<DefaultContent />}
-          footer={<Footer />}
         />
       </AppWrap>
+      <Footer />
     </>
   )
 }

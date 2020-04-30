@@ -12,14 +12,6 @@ type AppLayoutContainerProps = {
   footer?: JSX.Element
 }
 
-const Content = styled.div`
-  padding-top: 7rem;
-  padding-bottom: 4rem;
-  margin: 0 auto;
-  width: inherit;
-  min-height: 90vh;
-`
-
 const Header = styled.div`
   position: fixed;
   display: flex;
@@ -34,11 +26,12 @@ const Header = styled.div`
     text-align: center;
   }
 `
-
-const Footer = styled.div`
-  width: initial;
-  background-color: #f6f9fc;
-  padding: 2rem 0;
+const Content = styled.div`
+  padding-top: 7rem;
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  width: inherit;
+  min-height: 90vh;
 `
 
 const AppLayoutContainer = ({
@@ -46,7 +39,6 @@ const AppLayoutContainer = ({
   allDataChart,
   themeDataChart,
   defaultContent,
-  footer,
 }: AppLayoutContainerProps) => {
   const data: State = useSelector((state: RootState) => state.data)
 
@@ -63,7 +55,6 @@ const AppLayoutContainer = ({
           <div className="default">{defaultContent}</div>
         )}
       </Content>
-      <Footer>{footer}</Footer>
     </>
   )
 }
