@@ -5,29 +5,12 @@ import { State } from '../../../@types/reducer.d'
 import styled from 'styled-components'
 
 type AppLayoutContainerProps = {
-  header: JSX.Element
+  header?: JSX.Element
   allDataChart: JSX.Element
   themeDataChart: JSX.Element
   defaultContent: JSX.Element
-  footer?: JSX.Element
 }
 
-const Header = styled.div`
-  position: fixed;
-  display: flex;
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
-  width: inherit;
-  justify-content: space-between;
-  background: #ffffff;
-  z-index: 999;
-
-  @media screen and (max-width: 750px) {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-`
 const Content = styled.div`
   padding-top: 7rem;
   padding-bottom: 4rem;
@@ -44,7 +27,6 @@ const Chart = styled.div`
 `
 
 const AppLayoutContainer = ({
-  header,
   allDataChart,
   themeDataChart,
   defaultContent,
@@ -52,19 +34,16 @@ const AppLayoutContainer = ({
   const data: State = useSelector((state: RootState) => state.data)
 
   return (
-    <>
-      <Header>{header}</Header>
-      <Content>
-        {data.campusName ? (
-          <>
-            <Chart>{themeDataChart}</Chart>
-            <Chart>{allDataChart}</Chart>
-          </>
-        ) : (
-          <div className="default">{defaultContent}</div>
-        )}
-      </Content>
-    </>
+    <Content>
+      {data.campusName ? (
+        <>
+          <Chart>{themeDataChart}</Chart>
+          <Chart>{allDataChart}</Chart>
+        </>
+      ) : (
+        <div className="default">{defaultContent}</div>
+      )}
+    </Content>
   )
 }
 

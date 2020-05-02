@@ -25,9 +25,9 @@ const AppWrap = styled.div`
 const App = () => {
   return (
     <>
+      <HeaderContainer />
       <AppWrap>
         <AppLayoutContainer
-          header={<HeaderContainer />}
           allDataChart={<AllDataChartContainer />}
           themeDataChart={<ThemeDataChartContainer />}
           defaultContent={<DefaultContent />}

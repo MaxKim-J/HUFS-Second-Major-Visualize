@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const InputBtn = styled.div`
   cursor: pointer;
   font-size: 0.8rem;
-  background-color: #002a48;
   margin-top: 0.5rem;
-  color: white;
+  background-color: white;
+  color: #002a48;
   padding: 0.1rem 0.7rem;
   border-radius: 10px;
+  font-weight: 700;
 `
 
 export const InputSelect = styled.span`
