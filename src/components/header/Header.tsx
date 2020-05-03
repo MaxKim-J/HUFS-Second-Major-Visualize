@@ -7,12 +7,13 @@ import {
 
 import {
   HeaderWrap,
-  HeaderArrow,
   HeaderContent,
   HeaderInputSelect,
   HeaderInputTitle,
   HeaderTitle,
 } from './headerStyledComponents'
+
+import HeaderArrow from './HeaderArrow'
 
 type headerProps = {
   admissionArr: number[]
@@ -20,6 +21,7 @@ type headerProps = {
 }
 
 const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
+  const [showArrow, setShowArrow] = useState(true)
   const [input, setInput] = useState({
     admission: 0,
     campusName: '',
@@ -28,7 +30,6 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   const handleInput = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     const { name, value } = event.target
     setInput({ ...input, [name]: value })
-    console.log(input)
   }
 
   return (
@@ -69,13 +70,12 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
             onClick={() => {
               const { campusName, admission } = input
               onGetDataByInput(campusName, admission)
+              setShowArrow(false)
             }}
           >
             시작하기
+            {showArrow ? <HeaderArrow /> : null}
           </InputBtn>
-          <HeaderArrow>
-            <img src="arrow.png" />
-          </HeaderArrow>
         </InputBoxes>
       </HeaderContent>
     </HeaderWrap>
