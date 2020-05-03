@@ -2,10 +2,6 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import Emoji from '../Emoji'
 
-type HeaderArrowProps = {
-  isInput?: Boolean
-}
-
 const shakeEffectLarge = keyframes`
     0% {
         top:5rem;
@@ -48,7 +44,7 @@ const HeaderArrowContent = styled.div`
   }
 `
 
-const HeaderArrow = ({ isInput }: HeaderArrowProps) => {
+const HeaderArrow = () => {
   return (
     <HeaderArrowContent>
       <img src="arrow.png" alt="arrow" />
