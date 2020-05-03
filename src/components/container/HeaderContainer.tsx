@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header'
+import Header from '../header/Header'
 import { getDataByInput } from '../../reducer/data'
 import { useDispatch } from 'react-redux'
 import admissionArr from '../../config/admissions'

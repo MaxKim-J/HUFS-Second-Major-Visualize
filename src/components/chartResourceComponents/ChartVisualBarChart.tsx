@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo, ChartData, ChartDirection } from '../../@types/majorData'
+import { MajorInfo, ChartData, ChartDirection } from '../../../@types/majorData'
 import {
   BarChart,
   Bar,
@@ -9,7 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts'
-import getChartData from '../utils/getChartData'
+import getChartData from '../../utils/getChartData'
 import styled from 'styled-components'
 
 type ChartVisualBarChartProps = {

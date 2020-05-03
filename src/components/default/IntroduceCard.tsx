@@ -1,7 +1,7 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import Emoji from '../components/Emoji'
-import { Introduce } from '../config/introduce'
+import styled from 'styled-components'
+import Emoji from '../Emoji'
+import { Introduce } from '../../config/introduce'
 
 const CardWrap = styled.div`
   text-align: center;

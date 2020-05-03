@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import IntroduceCards from '../components/IntroduceCard'
-import { introduceArr, Introduce } from '../config/introduce'
-import styled, { keyframes } from 'styled-components'
-
-//todo 애니메이션으로 페이드되게 앱 소개하기 + 화살표 붙이기
-//todo useEffect setTimeout => 3초에 한번씩 컨텐츠 내용 바꾸기
+import IntroduceCards from './IntroduceCard'
+import { introduceArr, Introduce } from '../../config/introduce'
+import styled from 'styled-components'
 
 const IntroduceCardsWrap = styled.div`
   text-align: center;

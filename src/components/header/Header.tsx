@@ -3,7 +3,7 @@ import {
   InputBtn,
   InputSelect,
   InputBoxes,
-} from '../style/styledComponents/input'
+} from '../../style/styledComponents/input'
 import styled from 'styled-components'
 
 type headerProps = {
@@ -37,6 +37,7 @@ const HeaderWrap = styled.div`
   z-index: 999;
 `
 const HeaderContent = styled.div`
+  position: relative;
   width: 80%;
   margin: 0 auto;
   display: flex;
@@ -51,6 +52,13 @@ const HeaderContent = styled.div`
   @media screen and (max-width: 360px) {
     width: 95%;
   }
+`
+
+const HeaderArrow = styled.div`
+  position: absolute;
+  z-index: 999;
+  top: 2rem;
+  right: 10px;
 `
 
 const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
@@ -107,6 +115,9 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
           >
             시작하기
           </InputBtn>
+          <HeaderArrow>
+            <img src="arrow.png" />
+          </HeaderArrow>
         </InputBoxes>
       </HeaderContent>
     </HeaderWrap>

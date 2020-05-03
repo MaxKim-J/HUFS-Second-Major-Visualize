@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../@types/majorData'
-import { seoulTheme, globalTheme } from '../config/themes'
+import { MajorInfo } from '../../../@types/majorData'
+import { seoulTheme, globalTheme } from '../../config/themes'
 import ChartMajorBox from './ChartMajorBox'
-import searchTheme from '../utils/searchTheme'
-import { ChartMajorBoxes } from '../style/styledComponents/majorBoxes'
-import { ThemeInfo } from '../config/themes'
+import searchTheme from '../../utils/searchTheme'
+import { ChartMajorBoxes } from '../../style/styledComponents/majorBoxes'
+import { ThemeInfo } from '../../config/themes'
 
 type ChartSearchSelectProps = {
   campusName: string

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/majorData'
-import ChartTitle from '../ChartTitle'
-import ChartVisualBarChart from '../ChartVisualBarChart'
-import ChartNotice from '../ChartNotice'
-import ChartSearchSelect from '../ChartSearchSelect'
+import ChartTitle from '../chartResourceComponents/ChartTitle'
+import ChartVisualBarChart from '../chartResourceComponents/ChartVisualBarChart'
+import ChartNotice from '../chartResourceComponents/ChartNotice'
+import ChartSearchSelect from '../chartResourceComponents/ChartSearchSelect'
 
 type ThemeDataChartProps = {
   majorData: MajorInfo[]

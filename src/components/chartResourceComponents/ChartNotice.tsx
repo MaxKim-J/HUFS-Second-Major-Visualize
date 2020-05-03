@@ -1,11 +1,11 @@
 import React from 'react'
-import { MajorInfo } from '../../@types/majorData'
+import { MajorInfo } from '../../../@types/majorData'
 
 type ChartNoticeProps = {
   selectedInfo: MajorInfo[]
 }
 
-const ChartNoice = ({ selectedInfo }: ChartNoticeProps) => {
+const ChartNotice = ({ selectedInfo }: ChartNoticeProps) => {
   return (
     <div className="chart-notice">
       {selectedInfo.map((major: MajorInfo) =>
@@ -19,4 +19,4 @@ const ChartNoice = ({ selectedInfo }: ChartNoticeProps) => {
   )
 }
 
-export default ChartNoice
+export default ChartNotice
