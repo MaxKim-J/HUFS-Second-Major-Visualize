@@ -10,7 +10,7 @@ import '../src/style/global.css'
 import styled from 'styled-components'
 
 const AppWrap = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 
   @media screen and (max-width: 770px) {

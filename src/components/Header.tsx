@@ -12,7 +12,7 @@ type headerProps = {
 }
 
 const HeaderTitle = styled.span`
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: Recko;
   color: white;
 `
@@ -41,7 +41,7 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 750px) {
     width: 90%;
     display: flex;
     flex-direction: column;

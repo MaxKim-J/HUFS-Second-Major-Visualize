@@ -14,9 +14,12 @@ type AppLayoutContainerProps = {
 const Content = styled.div`
   padding-top: 7rem;
   padding-bottom: 4rem;
-  margin: 0 auto;
   width: inherit;
-  min-height: 90vh;
+  min-height: 80vh;
+  margin: 0 auto;
+  @media screen and (max-width: 750px) {
+    padding-top: 9rem;
+  }
 `
 
 const Chart = styled.div`
