@@ -4,62 +4,20 @@ import {
   InputSelect,
   InputBoxes,
 } from '../../style/styledComponents/input'
-import styled from 'styled-components'
+
+import {
+  HeaderWrap,
+  HeaderArrow,
+  HeaderContent,
+  HeaderInputSelect,
+  HeaderInputTitle,
+  HeaderTitle,
+} from './headerStyledComponents'
 
 type headerProps = {
   admissionArr: number[]
   onGetDataByInput: (campusName: string, admission: number) => void
 }
-
-const HeaderTitle = styled.span`
-  font-size: 1.6rem;
-  font-family: Recko;
-  color: white;
-`
-
-const HeaderInputSelect = styled.select`
-  font-size: 0.8rem;
-`
-
-const HeaderInputTitle = styled.span`
-  margin-right: 0.3rem;
-  margin-top: 0.4rem;
-  font-weight: 700;
-  font-size: 1rem;
-  color: white;
-`
-const HeaderWrap = styled.div`
-  position: fixed;
-  padding-top: 2rem;
-  padding-bottom: 0.5rem;
-  width: 100%;
-  background: #002a48;
-  z-index: 999;
-`
-const HeaderContent = styled.div`
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  @media screen and (max-width: 750px) {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 360px) {
-    width: 95%;
-  }
-`
-
-const HeaderArrow = styled.div`
-  position: absolute;
-  z-index: 999;
-  top: 2rem;
-  right: 10px;
-`
 
 const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
   const [input, setInput] = useState({
