@@ -1,5 +1,6 @@
 {
   "name": "hufs-second-major-visual",
+  "homepage": "https://maxkim-j.github.io/HUFS-Second-Major-Visualize/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +15,7 @@
     "@types/react-transition-group": "^4.2.4",
     "@types/recharts": "^1.8.9",
     "@types/styled-components": "^5.1.0",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -28,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
