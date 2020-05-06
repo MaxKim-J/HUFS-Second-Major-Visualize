@@ -8,7 +8,11 @@ const HeaderContainer = () => {
   const dispatch = useDispatch()
 
   const onGetDataByInput = (campusName: string, admission: number): void => {
-    dispatch(getDataByInput(campusName, admission))
+    if (campusName && admission) {
+      dispatch(getDataByInput(campusName, admission))
+    } else {
+      alert('학번과 캠퍼스 모두 입력해주세요')
+    }
   }
 
   return (
