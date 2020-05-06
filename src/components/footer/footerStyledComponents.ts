@@ -52,3 +52,7 @@ export const FooterSection = styled.div`
     flex-direction: column;
   }
 `
+
+export const FooterIntroduceDetail = styled.div`
+  font-size: 0.8rem;
+`

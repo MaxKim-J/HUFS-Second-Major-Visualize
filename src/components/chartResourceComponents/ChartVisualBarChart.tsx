@@ -20,7 +20,23 @@ const BarChartWrap = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: #f7f7f7;
+  margin-top: 1rem;
+`
+const BarChartLegendWrap = styled.div`
+  margin-top: 1rem;
+`
+
+const BarChartLegend = styled.span`
+  margin-right: 1rem;
+`
+const LegendColorBox = styled.span`
+  background-color: ${props => props.color};
+  width: 12px;
+  height: 12px;
+  margin-right: 0.3rem;
+  display: inline-block;
   margin-top: 1rem;
 `
 
@@ -38,6 +54,14 @@ const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
 
   return (
     <BarChartWrap>
+      <BarChartLegendWrap>
+        {direction.map((bar: ChartDirection, idx: number) => (
+          <BarChartLegend>
+            <LegendColorBox color={bar.color}></LegendColorBox>
+            <span>{bar.major}</span>
+          </BarChartLegend>
+        ))}
+      </BarChartLegendWrap>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart
           data={chart}

@@ -8,6 +8,7 @@ import {
   FooterIcons,
   FooterIcon,
   FooterWrap,
+  FooterIntroduceDetail,
 } from './footerStyledComponents'
 
 const Footer = () => {
@@ -18,8 +19,12 @@ const Footer = () => {
           Developed by <Emoji label="max" emoji="🧑🏻‍💻" />
           Max Kim
         </FooterIntroduce>
-        <div>자바스크립트 개발자, 융소 이중하는 고학번</div>
-        <div>Version : 1.0.0</div>
+        <FooterIntroduceDetail>
+          <div>자바스크립트 개발자이자 융소를 이중하는 고학번입니다.</div>
+          <div>
+            서비스에 대한 피드백, 기타 제안은 하단 메일로 부탁드리겠습니다..!
+          </div>
+        </FooterIntroduceDetail>
         <FooterSection>
           <FooterIcons>
             <FooterIcon>
@@ -48,7 +53,7 @@ const Footer = () => {
             </FooterIcon>
           </FooterIcons>
           <FooterCopyrigths>
-            HUFS Second Major DB © Max Kim. 2020
+            HUFS Second Major 1.0.0 © Max Kim. 2020
           </FooterCopyrigths>
         </FooterSection>
       </FooterContent>
