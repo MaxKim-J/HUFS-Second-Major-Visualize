@@ -1,7 +1,12 @@
 # HUFS-Second-Major-Visualize
 
-프로젝트 기간 : 2020.04.15 ~ 5월 안에 끝낼것  
+# 🎓✌🏻📊
+
+![라스트커밋](https://img.shields.io/badge/MadeFor-HUFS%20Students-%23002a48?style=for-the-badge&logo=TypeScript)  
+![라스트커밋](https://img.shields.io/github/last-commit/MaxKim-J/HUFS-Second-Major-Visualize?style=flat-square) ![라스트커밋](https://img.shields.io/github/v/release/MaxKim-J/HUFS-Second-Major-Visualize?style=flat-square)  
 한국외대 이중전공 변경 여석 데이터 시각화 서비스
+
+![dd](./appImage.png)
 
 ## ✔️ 주요 기능
 
@@ -15,10 +20,21 @@
 
 ## ⚓️ 의존성
 
-- [`react.js`](https://github.com/facebook/react) + [`TypeScript`](https://github.com/microsoft/TypeScript)
-- 상태관리 : [`react-redux`](https://github.com/reduxjs/react-redux)
-- 엑셀파일 파싱 : [`sheet.js`](https://github.com/SheetJS/sheetjs)
-- 데이터 시각화 : [`react-d3-components`](https://github.com/codesuki/react-d3-components)
-- css-in-js : [미정]()
+- [React.js(CRA)](https://github.com/facebook/react) + [TypeScript](https://github.com/microsoft/TypeScript)
+- [react-redux](https://github.com/reduxjs/react-redux)
+- [xlsx](https://github.com/SheetJS/sheetjs)
+- [recharts](https://github.com/recharts/recharts)
+- [styled-components](https://github.com/styled-components/styled-components)
+- [gh-pages](https://github.com/tschaub/gh-pages)
 
 ## 🧩 프로젝트 구조
+
+추후 업데이트 예정
+
+## 📌 버전
+
+[릴리즈 노트](https://github.com/MaxKim-J/HUFS-Second-Major-Visualize/releases)를 참조해주세요!
+
+## 📈 데이터 출처
+
+[한국외국어대학교 학사공지](http://hufs.ac.kr/)
