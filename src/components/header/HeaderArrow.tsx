@@ -46,7 +46,7 @@ const HeaderArrowContent = styled.div`
 const HeaderArrow = () => {
   return (
     <HeaderArrowContent>
-      <img src="arrow.png" alt="arrow" />
+      <img src="/images/arrow.png" alt="arrow" />
       <HeaderArrowText>
         <Emoji label="hi" emoji="😉" />
         학번, 캠퍼스 입력 후 시작!
