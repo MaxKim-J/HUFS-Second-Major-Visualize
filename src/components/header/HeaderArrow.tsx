@@ -27,8 +27,7 @@ const shakeEffectSmall = keyframes`
 `
 
 const HeaderArrowText = styled.div`
-  text-align: left;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   font-weight: 700;
 `
 
@@ -49,10 +48,8 @@ const HeaderArrow = () => {
     <HeaderArrowContent>
       <img src="arrow.png" alt="arrow" />
       <HeaderArrowText>
-        <div>
-          <Emoji label="hi" emoji="😉" />
-          학번, 캠퍼스 입력 후 시작!
-        </div>
+        <Emoji label="hi" emoji="😉" />
+        학번, 캠퍼스 입력 후 시작!
       </HeaderArrowText>
     </HeaderArrowContent>
   )
