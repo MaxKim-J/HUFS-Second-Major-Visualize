@@ -37,7 +37,7 @@ const ChartSearchSelect = ({
       <ChartMajorBoxes>
         {themeArr.map((theme: ThemeInfo) => (
           <span onClick={() => setSelectedThemeInfo(theme.name)}>
-            <ChartMajorBox major={theme.name} emoji={theme.emoji} />
+            <ChartMajorBox major={theme.name} icon={theme.icon} />
           </span>
         ))}
       </ChartMajorBoxes>

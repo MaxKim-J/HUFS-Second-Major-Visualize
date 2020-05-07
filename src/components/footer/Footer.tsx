@@ -53,7 +53,18 @@ const Footer = () => {
             </FooterIcon>
           </FooterIcons>
           <FooterCopyrigths>
-            HUFS Second Major 1.0.0 © Max Kim. 2020
+            Icons made by &nbsp;
+            <a
+              href="https://www.flaticon.com/authors/roundicons"
+              title="Roundicons"
+            >
+              Roundicons &nbsp;
+            </a>
+            from&nbsp;
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              www.flaticon.com
+            </a>
+            , HUFS Second Major 1.0.0 © Max Kim. 2020
           </FooterCopyrigths>
         </FooterSection>
       </FooterContent>

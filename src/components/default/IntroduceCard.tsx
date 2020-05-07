@@ -8,7 +8,6 @@ const CardWrap = styled.div`
   border-radius: 20px;
   padding-top: 8rem;
   padding-bottom: 3rem;
-  transition: opacity 1s;
 `
 
 const CardTitle = styled.div`
