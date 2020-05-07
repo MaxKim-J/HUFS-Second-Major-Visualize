@@ -18,6 +18,9 @@ const CardTitle = styled.div`
   @media screen and (max-width: 750px) {
     font-size: 0.9rem;
   }
+  @media screen and (max-width: 380px) {
+    font-size: 0.7rem;
+  }
 `
 
 const CardLogo = styled.div`
