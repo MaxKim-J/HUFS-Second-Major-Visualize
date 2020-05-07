@@ -4,6 +4,7 @@ export const HeaderTitle = styled.span`
   font-size: 1.5rem;
   font-family: Recko;
   color: white;
+  cursor: pointer;
 `
 
 export const HeaderInputSelect = styled.select`

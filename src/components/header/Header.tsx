@@ -35,7 +35,9 @@ const Header = ({ admissionArr, onGetDataByInput, showArrow }: headerProps) => {
   return (
     <HeaderWrap>
       <HeaderContent>
-        <HeaderTitle>한국외대 이중전공 DB</HeaderTitle>
+        <HeaderTitle onClick={() => window.location.reload()}>
+          한국외대 이중전공 DB
+        </HeaderTitle>
         <InputBoxes>
           <InputSelect>
             <HeaderInputTitle>캠퍼스</HeaderInputTitle>
