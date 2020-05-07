@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderTitle = styled.span`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-family: Recko;
   color: white;
 `
@@ -13,8 +13,7 @@ export const HeaderInputSelect = styled.select`
 export const HeaderInputTitle = styled.span`
   margin-right: 0.3rem;
   margin-top: 0.4rem;
-  font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
 `
 export const HeaderWrap = styled.div`

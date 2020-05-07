@@ -18,10 +18,10 @@ import HeaderArrow from './HeaderArrow'
 type headerProps = {
   admissionArr: number[]
   onGetDataByInput: (campusName: string, admission: number) => void
+  showArrow: Boolean
 }
 
-const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
-  const [showArrow, setShowArrow] = useState(true)
+const Header = ({ admissionArr, onGetDataByInput, showArrow }: headerProps) => {
   const [input, setInput] = useState({
     admission: 0,
     campusName: '',
@@ -70,10 +70,9 @@ const Header = ({ admissionArr, onGetDataByInput }: headerProps) => {
             onClick={() => {
               const { campusName, admission } = input
               onGetDataByInput(campusName, admission)
-              setShowArrow(false)
             }}
           >
-            시작하기
+            시작
             {showArrow ? <HeaderArrow /> : null}
           </InputBtn>
         </InputBoxes>
