@@ -1,6 +1,6 @@
 # HUFS-Second-Major-Visualize
 
-# 🎓✌🏻📊
+### 🎓✌🏻📊
 
 ![라스트커밋](https://img.shields.io/badge/MadeFor-HUFS%20Students-%23002a48?style=for-the-badge&logo=TypeScript)  
 ![라스트커밋](https://img.shields.io/github/last-commit/MaxKim-J/HUFS-Second-Major-Visualize?style=flat-square) ![라스트커밋](https://img.shields.io/github/v/release/MaxKim-J/HUFS-Second-Major-Visualize?style=flat-square)  
