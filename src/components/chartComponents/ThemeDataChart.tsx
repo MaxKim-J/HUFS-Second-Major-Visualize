@@ -26,7 +26,7 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
       <ChartTitle
         title={'테마보기'}
         subTitle={
-          '캠퍼스별 자주 찾는 이중전공 데이터를 모아봤습니다. 테마를 선택해 주세요'
+          '캠퍼스별 자주 찾는 이중전공 변경 여석 데이터를 모아봤습니다. 테마를 선택해 주세요'
         }
       />
       <ChartSearchSelect
