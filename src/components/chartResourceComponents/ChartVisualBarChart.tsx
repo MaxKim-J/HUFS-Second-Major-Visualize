@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { MajorInfo, ChartData, ChartDirection } from '../../../@types/majorData'
 import {
-  BarChart,
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  ComposedChart,
+  Line,
 } from 'recharts'
 import getChartData from '../../utils/getChartData'
 import styled from 'styled-components'
+import { InputBtn } from '../../style/styledComponents/input'
 
 type ChartVisualBarChartProps = {
   selectedInfo: MajorInfo[]
@@ -53,11 +55,18 @@ const LegendColorBox = styled.span`
   margin-top: 1rem;
 `
 
+const ChartBtn = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+`
+
 const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
   const [chartData, setChartData] = useState<ChartData>({
     direction: [],
     chart: [],
   })
+  const [chartType, setChartType] = useState<boolean>(true)
 
   useEffect(() => {
     setChartData(getChartData(selectedInfo))
@@ -76,20 +85,37 @@ const ChartVisualBarChart = ({ selectedInfo }: ChartVisualBarChartProps) => {
         ))}
       </BarChartLegendWrap>
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart
+        <ComposedChart
           data={chart}
-          margin={{ top: 30, right: 30, left: -20, bottom: 20 }}
-          barGap={5}
+          margin={{ top: 30, right: 30, left: -20, bottom: 5 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip isAnimationActive={false} />
-          {direction.map((bar: ChartDirection, idx: number) => (
-            <Bar key={idx} dataKey={bar.major} fill={bar.color} />
-          ))}
-        </BarChart>
+          {chartType
+            ? direction.map((bar: ChartDirection, barIdx: number) => (
+                <Bar key={barIdx} dataKey={bar.major} fill={bar.color} />
+              ))
+            : direction.map((line: ChartDirection, lineIdx: number) => (
+                <Line
+                  type="linear"
+                  key={lineIdx}
+                  dataKey={line.major}
+                  stroke={line.color}
+                  strokeWidth={4}
+                  dot={{ strokeWidth: 6 }}
+                />
+              ))}
+        </ComposedChart>
       </ResponsiveContainer>
+      <ChartBtn>
+        {direction.length > 0 ? (
+          <InputBtn onClick={() => setChartType(!chartType)}>
+            {chartType ? '꺾은선 그래프로 바꾸기' : '막대 그래프로 바꾸기'}
+          </InputBtn>
+        ) : null}
+      </ChartBtn>
     </BarChartWrap>
   )
 }
