@@ -16,6 +16,10 @@ const MajorBox = styled.span`
   font-size: 0.8rem;
   display: flex;
   cursor: pointer;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: #d0d9e2;
+  }
 `
 
 const MajorBoxCloseBtn = styled.div`
