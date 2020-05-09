@@ -36,7 +36,7 @@ const HeaderArrowContent = styled.div`
   margin-top: 2rem;
   position: fixed;
   top: 4rem;
-  animation: ${shakeEffectLarge} 1.3s ease infinite;
+  -webkit-animation: ${shakeEffectLarge} 1.3s ease infinite;
   font-size: 0.8rem;
   @media screen and (max-width: 750px) {
     top: 6.1rem;
