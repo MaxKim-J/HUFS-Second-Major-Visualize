@@ -16,8 +16,8 @@ const ChartNoticeContent = styled.div`
     font-size: 0.8rem;
   }
 
-  @media screen and (max-width: 360px) {
-    font-size: 0.6rem;
+  @media screen and (max-width: 420px) {
+    font-size: 0.7rem;
   }
 `
 
