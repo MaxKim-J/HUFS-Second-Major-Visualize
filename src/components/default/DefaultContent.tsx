@@ -15,24 +15,27 @@ const NavigationDot = styled.span<{ checked: boolean }>`
 `
 
 const DefaultContent = () => {
-  let [cardNum, setCardNum] = useState<number>(0)
+  const [cardNum, setCardNum] = useState<number>(0)
+  const introduceLength = introduceArr.length
 
   useEffect(() => {
-    let cardTimer = setTimeout(() => setCardNum(cardNum + 1), 5000)
-    return () => clearTimeout(cardTimer)
-  })
+    let cardTimer = setInterval(() => setCardNum(num => num + 1), 5000)
+    return () => clearInterval(cardTimer)
+  }, [cardNum])
 
   const updateCardNum = (idx: number) => {
     setCardNum(idx)
   }
 
-  const { id, title, emoji, contents }: Introduce = introduceArr[cardNum % 3]
+  const { id, title, emoji, contents }: Introduce = introduceArr[
+    cardNum % introduceLength
+  ]
 
   return (
     <IntroduceCardsWrap>
       <IntroduceCards id={id} title={title} emoji={emoji} contents={contents} />
       {introduceArr.map((card, idx) =>
-        idx === cardNum % 3 ? (
+        idx === cardNum % introduceLength ? (
           <NavigationDot key={idx} checked={true}>
             ·
           </NavigationDot>

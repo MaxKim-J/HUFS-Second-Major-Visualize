@@ -42,6 +42,9 @@ export const FooterIntroduce = styled.div`
   font-size: 1.5rem;
   font-family: Noto Sans KR;
   font-weight: bold;
+  @media screen and (max-width: 420px) {
+    font-size: 1.2rem;
+  }
 `
 
 export const FooterSection = styled.div`
@@ -55,4 +58,7 @@ export const FooterSection = styled.div`
 
 export const FooterIntroduceDetail = styled.div`
   font-size: 0.8rem;
+  @media screen and (max-width: 420px) {
+    font-size: 0.5rem;
+  }
 `
