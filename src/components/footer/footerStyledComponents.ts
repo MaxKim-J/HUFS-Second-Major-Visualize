@@ -59,6 +59,6 @@ export const FooterSection = styled.div`
 export const FooterIntroduceDetail = styled.div`
   font-size: 0.8rem;
   @media screen and (max-width: 420px) {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 `
