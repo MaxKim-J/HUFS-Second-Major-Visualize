@@ -21,8 +21,8 @@ export const seoulTheme: ThemeInfo[] = [
 ]
 
 export const globalTheme: ThemeInfo[] = [
-  { name: '영어통번역학부', icon: './images/trans.png' },
-  { name: '경상대학', icon: './images/bus.png' },
+  { name: '영어통번역학과', icon: './images/trans.png' },
+  { name: '경상대', icon: './images/bus.png' },
   { name: '통계학과', icon: './images/statistics.png' },
-  { name: '인기융합전공', icon: '/.images/converge.png' },
+  { name: '인기융합전공', icon: './images/converge.png' },
 ]
