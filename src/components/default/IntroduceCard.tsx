@@ -8,7 +8,6 @@ const CardWrap = styled.div`
   border-radius: 20px;
   padding-top: 8rem;
   padding-bottom: 3rem;
-  transition: opacity 1s;
 `
 
 const CardTitle = styled.div`
@@ -17,6 +16,9 @@ const CardTitle = styled.div`
   font-size: 1.2rem;
   @media screen and (max-width: 750px) {
     font-size: 0.9rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 0.7rem;
   }
 `
 

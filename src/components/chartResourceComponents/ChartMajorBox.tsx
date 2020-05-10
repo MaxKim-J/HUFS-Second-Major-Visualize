@@ -4,7 +4,7 @@ import Emoji from '../Emoji'
 
 type ChartMajorBoxProps = {
   major: string
-  emoji?: string
+  icon?: string
   cancelFunction?: (major: string) => void
 }
 
@@ -14,26 +14,33 @@ const MajorBox = styled.span`
   border-radius: 20px;
   margin: 0 0.5rem 0.5rem 0;
   font-size: 0.8rem;
-  display: block;
+  display: flex;
   cursor: pointer;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: #d0d9e2;
+  }
 `
 
-const MajorBoxCloseBtn = styled.span`
+const MajorBoxCloseBtn = styled.div`
   margin-left: 1rem;
 `
 
-const MajorBoxTitle = styled.span`
+const MajorBoxTitle = styled.div`
   font-size: 0.8rem;
 `
 
-const ChartMajorBox = ({
-  major,
-  emoji,
-  cancelFunction,
-}: ChartMajorBoxProps) => {
+const MajorBoxIcon = styled.img`
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  margin-top: 0.1rem;
+`
+
+const ChartMajorBox = ({ major, icon, cancelFunction }: ChartMajorBoxProps) => {
   return (
     <MajorBox>
-      {emoji ? <Emoji label="logo" emoji={emoji} /> : null}
+      {icon ? <MajorBoxIcon src={icon} alt={icon} /> : null}
       <MajorBoxTitle>{major}</MajorBoxTitle>
       {cancelFunction ? (
         <MajorBoxCloseBtn

@@ -1,27 +1,28 @@
 export type ThemeInfo = {
   name: string
-  emoji: string
+  icon: string
 }
 
 export const seoulTheme: ThemeInfo[] = [
-  { name: '영어대', emoji: '🇺🇸' },
-  { name: '프랑스어학부', emoji: '🇫🇷' },
-  { name: '스페인어과', emoji: '🇪🇸' },
-  { name: '마인어과', emoji: '🇲🇾' },
-  { name: '베트남어과', emoji: '🇻🇳' },
-  { name: '중국어대', emoji: '🇨🇳' },
-  { name: '일본어대', emoji: '🇯🇵' },
-  { name: '사과대', emoji: '👥' },
-  { name: '미컴', emoji: '📸' },
-  { name: '상경계열', emoji: '📈' },
-  { name: 'LD/LT', emoji: '🌏' },
-  { name: '인기융합전공', emoji: '🔁' },
-  { name: '국제학부', emoji: '🇺🇳' },
+  { name: '영어대학', icon: '/images/english.png' },
+  { name: '프랑스어학부', icon: '/images/france.png' },
+  { name: '스페인어과', icon: '/images/spain.png' },
+  { name: '마인어과', icon: '/images/indonesia.png' },
+  { name: '베트남어과', icon: '/images/vietnam.png' },
+  { name: '중국어대', icon: '/images/china.png' },
+  { name: '일본어대', icon: '/images/japan.png' },
+  { name: '사과대', icon: '/images/social.png' },
+  { name: '미디어커뮤니케이션학부', icon: '/images/broad.png' },
+  { name: '상경대학', icon: '/images/line.png' },
+  { name: '경영학전공', icon: '/images/business.png' },
+  { name: 'LD/LT', icon: '/images/ldlt.png' },
+  { name: '인기융합전공', icon: '/images/converge.png' },
+  { name: '국제학부', icon: '/images/inter.png' },
 ]
 
 export const globalTheme: ThemeInfo[] = [
-  { name: '영통', emoji: '🗣' },
-  { name: '경상대', emoji: '💰' },
-  { name: '통계학과', emoji: '📊' },
-  { name: '인기융합전공', emoji: '🔁' },
+  { name: '영어통번역학부', icon: '/images/trans.png' },
+  { name: '경상대학', icon: '/images/bus.png' },
+  { name: '통계학과', icon: '/images/statistics.png' },
+  { name: '인기융합전공', icon: '/images/converge.png' },
 ]
