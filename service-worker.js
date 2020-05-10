@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/HUFS-Second-Major-Visualize/precache-manifest.a5b1f1ab8782ee816eeee06601877f0a.js"
+  "/HUFS-Second-Major-Visualize/precache-manifest.787a8099bcba18ec55f814dfebbfca68.js"
 );
 
 self.addEventListener('message', (event) => {
