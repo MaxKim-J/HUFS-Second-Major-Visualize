@@ -53,7 +53,7 @@ const Footer = () => {
             </FooterIcon>
           </FooterIcons>
           <FooterCopyrigths>
-            <div>HUFS Second Major 1.1.2 © Max Kim. 2020</div>
+            <div>HUFS Second Major 1.1.3 © Max Kim. 2020</div>
             <div>
               Icons made by &nbsp;
               <a
