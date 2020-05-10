@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9368950895b1ff458d59b0006cd4f8d",
+    "revision": "1224b25281e5b7fc41a2d7f0050bb63e",
     "url": "/HUFS-Second-Major-Visualize/index.html"
   },
   {
-    "revision": "f4129a689a6119f5e0e7",
+    "revision": "5f9a1db4ceb81c47c8b4",
     "url": "/HUFS-Second-Major-Visualize/static/css/main.782c70ea.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HUFS-Second-Major-Visualize/static/js/2.cc80698d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f4129a689a6119f5e0e7",
-    "url": "/HUFS-Second-Major-Visualize/static/js/main.18b17374.chunk.js"
+    "revision": "5f9a1db4ceb81c47c8b4",
+    "url": "/HUFS-Second-Major-Visualize/static/js/main.89697f92.chunk.js"
   },
   {
     "revision": "e14ec3fc190614213363",
