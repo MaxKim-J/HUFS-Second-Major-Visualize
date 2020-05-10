@@ -38,10 +38,8 @@ const HeaderArrowContent = styled.div`
   top: 4rem;
   -webkit-animation: ${shakeEffectLarge} 1.3s ease infinite;
   font-size: 0.8rem;
-  @media screen and (max-width: 750px) {
-    top: 6.1rem;
-    animation: ${shakeEffectSmall} 1.3s ease infinite;
-    font-size: 0.6rem;
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `
 
