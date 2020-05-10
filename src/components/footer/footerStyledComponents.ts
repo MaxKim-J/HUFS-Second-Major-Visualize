@@ -22,6 +22,7 @@ export const FooterContent = styled.div`
 
 export const FooterIcons = styled.div`
   display: flex;
+  margin-top: 0.6rem;
 `
 
 export const FooterIcon = styled.div`
