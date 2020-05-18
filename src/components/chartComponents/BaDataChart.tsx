@@ -16,7 +16,7 @@ const BaDataChart = ({ baData, onGetBaDataByInput }: BaDataChartProps) => {
   //todo baSelect 컴포넌트에서 학기 정보를 올려보내면 배열에서 그 학기에 맞는 정보를 찾아줘야함
   //todo 경영 데이터 표시해주는 새 컴포넌트가 필요
   //todo chart 컴포넌트는 새로 필요함(이분 막대 그래프)
-  //todo selected 컴포넌트는 기본컴포넌트 로직을 바꿔서 진행
+  //todo selected 컴포넌트는 지금 컴넌 로직을 하이어오더 패턴으로 바꿔서 진행
   return (
     <>
       <ChartTitle
