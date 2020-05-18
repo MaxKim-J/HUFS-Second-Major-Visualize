@@ -1,14 +1,22 @@
 import React, { useState } from 'react'
 import ChartTitle from '../chartResourceComponents/ChartTitle'
+import { baParsingResult } from '../../../@types/baData'
 import ChartSearchCompare from '../chartResourceComponents/ChartSearchCompare'
 import ChartVisualBarChart from '../chartResourceComponents/ChartVisualBarChart'
 import ChartNotice from '../chartResourceComponents/ChartNotice'
 
-const BaDataChart = () => {
-  const [selectedSemester, setSelctedSemester] = useState('')
+type BaDataChartProps = {
+  baData: baParsingResult
+  onGetBaDataByInput: (semester: string) => void
+}
+
+const BaDataChart = ({ baData, onGetBaDataByInput }: BaDataChartProps) => {
+  const [selectedSemester, setSelectedSemester] = useState('')
 
   //todo baSelect 컴포넌트에서 학기 정보를 올려보내면 배열에서 그 학기에 맞는 정보를 찾아줘야함
-
+  //todo 경영 데이터 표시해주는 새 컴포넌트가 필요
+  //todo chart 컴포넌트는 새로 필요함(이분 막대 그래프)
+  //todo selected 컴포넌트는 기본컴포넌트 로직을 바꿔서 진행
   return (
     <>
       <ChartTitle
