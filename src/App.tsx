@@ -4,6 +4,7 @@ import AllDataChartContainer from './components/container/AllDataChartContainer'
 import ThemeDataChartContainer from './components/container/ThemeDataChartContainer'
 import AppLayoutContainer from './components/container/AppLayoutContainer'
 import DefaultContent from './components/default/DefaultContent'
+import BaDataChart from './components/chartComponents/BaDataChart'
 import Footer from './components/footer/Footer'
 import '../src/style/font.css'
 import '../src/style/global.css'
@@ -31,6 +32,7 @@ const App = () => {
           allDataChart={<AllDataChartContainer />}
           themeDataChart={<ThemeDataChartContainer />}
           defaultContent={<DefaultContent />}
+          baDataChart={<BaDataChart />}
         />
       </AppWrap>
       <Footer />

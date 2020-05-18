@@ -8,6 +8,7 @@ type AppLayoutContainerProps = {
   header?: JSX.Element
   allDataChart: JSX.Element
   themeDataChart: JSX.Element
+  baDataChart: JSX.Element
   defaultContent: JSX.Element
 }
 
@@ -33,6 +34,7 @@ const AppLayoutContainer = ({
   allDataChart,
   themeDataChart,
   defaultContent,
+  baDataChart,
 }: AppLayoutContainerProps) => {
   const data: State = useSelector((state: RootState) => state.data)
 
@@ -42,6 +44,7 @@ const AppLayoutContainer = ({
         <>
           <Chart>{themeDataChart}</Chart>
           <Chart>{allDataChart}</Chart>
+          <Chart>{baDataChart}</Chart>
         </>
       ) : (
         <div className="default">{defaultContent}</div>
