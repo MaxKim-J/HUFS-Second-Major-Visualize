@@ -22,7 +22,7 @@ export const getDataByInput = (campusName: string, admission: number) => ({
 })
 
 export const getBaDataByInput = (semester: string) => ({
-  type: GETDATABYINPUT,
+  type: GETBADATABYINPUT,
   payload: {
     semester: semester,
   },
@@ -49,16 +49,19 @@ const reducer = (state: State = initialState, action: Action) => {
         },
       )
       return {
+        ...state,
         majorData: searchedTarget,
         campusName: campusName,
       }
     case GETBADATABYINPUT:
       const { semester }: getBaDataByInputPayload = action.payload
-      const baTarget = require(`./data/ba.json`)
+      const baTarget = require('./data/ba.json')
       const baData: baParsingResult = baTarget.find((elem: baParsingResult) => {
         return elem.semester === semester
       })
+      console.log(baData)
       return {
+        ...state,
         baData: baData,
       }
     default:
