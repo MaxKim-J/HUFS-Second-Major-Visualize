@@ -53,6 +53,7 @@ const reducer = (state: State = initialState, action: Action) => {
         majorData: searchedTarget,
         campusName: campusName,
       }
+
     case GETBADATABYINPUT:
       const { semester }: getBaDataByInputPayload = action.payload
       const baTarget = require('./data/ba.json')
@@ -64,6 +65,7 @@ const reducer = (state: State = initialState, action: Action) => {
         ...state,
         baData: baData,
       }
+
     default:
       return state
   }

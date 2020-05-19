@@ -34,7 +34,10 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
         majorData={majorData}
         updateSelectedThemeInfo={updateSelectedThemeInfo}
       />
-      <ChartVisualBarChart selectedInfo={selectedThemeInfo} />
+      <ChartVisualBarChart
+        selectedInfo={selectedThemeInfo}
+        chartType={'major'}
+      />
       <ChartNotice selectedInfo={selectedThemeInfo} />
     </>
   )

@@ -1,5 +1,6 @@
 export interface passPerAdmission {
   id: number
+  type: 'passPerAdmission'
   admission: number
   examTaker: number
   examPasser: number
