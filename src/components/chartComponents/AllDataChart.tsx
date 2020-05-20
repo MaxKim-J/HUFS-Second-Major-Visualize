@@ -43,7 +43,7 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
         updateSelectedInfo={updateSelectedInfo}
       />
       <ChartVisualBarChart selectedInfo={selectedInfo} chartType={'major'} />
-      <ChartNotice selectedInfo={selectedInfo} />
+      <ChartNotice selectedInfo={selectedInfo} majorNoticeType={true} />
     </>
   )
 }

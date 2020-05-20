@@ -38,7 +38,7 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
         selectedInfo={selectedThemeInfo}
         chartType={'major'}
       />
-      <ChartNotice selectedInfo={selectedThemeInfo} />
+      <ChartNotice selectedInfo={selectedThemeInfo} majorNoticeType={true} />
     </>
   )
 }
