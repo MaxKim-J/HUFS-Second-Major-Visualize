@@ -4,7 +4,7 @@ import Emoji from '../Emoji'
 
 type ChartMajorBoxProps = {
   major: string
-  icon?: string
+  icon?: string | null
   cancelFunction?: (major: string) => void
 }
 
