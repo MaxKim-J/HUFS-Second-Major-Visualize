@@ -14,7 +14,6 @@ export const BarChartLegendWrap = styled.div`
   justify-content: center;
   @media screen and (max-width: 440px) {
     flex-direction: column;
-    justify-content: flex-start;
   }
 `
 
@@ -26,6 +25,8 @@ export const BarChartLegend = styled.div`
 
   @media screen and (max-width: 420px) {
     font-size: 0.6rem;
+    text-align: left;
+    margin-left: 1rem;
   }
 `
 export const LegendColorBox = styled.span`

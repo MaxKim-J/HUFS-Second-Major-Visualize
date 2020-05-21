@@ -15,9 +15,9 @@ const BaDataChart = ({ baData, onGetBaDataByInput }: BaDataChartProps) => {
   return (
     <>
       <ChartTitle
-        title={'경영대학 이중전공 시험 정보'}
+        title={'경영대학 이중 시험 정보'}
         subTitle={
-          '4학기간의 경영대학 경영학전공 이중전공 시험의 학번별 합격 통계를 조회합니다. 학기를 선택해 주세요.'
+          '4학기간의 경영대학 경영학전공 이중 필기 시험의 학번별 합격 통계를 조회합니다. 학기를 선택해 주세요.'
         }
       />
       <BaWithSearchSelect onGetBaDataByInput={onGetBaDataByInput} />
