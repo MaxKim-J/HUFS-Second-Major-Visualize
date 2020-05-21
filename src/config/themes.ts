@@ -1,6 +1,6 @@
 export type ThemeInfo = {
   name: string
-  icon: string
+  icon: string | null
 }
 
 export const seoulTheme: ThemeInfo[] = [
@@ -25,4 +25,11 @@ export const globalTheme: ThemeInfo[] = [
   { name: '경상대학', icon: './images/bus.png' },
   { name: '통계학과', icon: './images/statistics.png' },
   { name: '인기융합전공', icon: '/.images/converge.png' },
+]
+
+export const semesterTheme: ThemeInfo[] = [
+  { name: '2018-1', icon: null },
+  { name: '2018-2', icon: null },
+  { name: '2019-1', icon: null },
+  { name: '2019-2', icon: null },
 ]

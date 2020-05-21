@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/majorData'
 import ChartTitle from '../chartResourceComponents/ChartTitle'
 import ChartSearchCompare from '../chartResourceComponents/ChartSearchCompare'
-import ChartVisualBarChart from '../chartResourceComponents/ChartVisualBarChart'
+import ChartWithVisualChart from '../chartResourceComponents/ChartWithVisualChart'
 import ChartNotice from '../chartResourceComponents/ChartNotice'
 
 type AllDataChartProps = {
@@ -42,8 +42,8 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
         selectedInfo={selectedInfo}
         updateSelectedInfo={updateSelectedInfo}
       />
-      <ChartVisualBarChart selectedInfo={selectedInfo} />
-      <ChartNotice selectedInfo={selectedInfo} />
+      <ChartWithVisualChart selectedInfo={selectedInfo} chartType={'major'} />
+      <ChartNotice selectedInfo={selectedInfo} majorNoticeType={true} />
     </>
   )
 }

@@ -3,7 +3,8 @@ import { MajorInfo } from '../../../@types/majorData'
 import styled from 'styled-components'
 
 type ChartNoticeProps = {
-  selectedInfo: MajorInfo[]
+  selectedInfo: MajorInfo[] | string[]
+  majorNoticeType?: boolean
 }
 
 const ChartNoticeBox = styled.div`
@@ -42,10 +43,26 @@ const ChartNoticeSection = styled.div`
   padding-left: 0.5rem;
 `
 
-const ChartNotice = ({ selectedInfo }: ChartNoticeProps) => {
+const ChartNotice = ({ selectedInfo, majorNoticeType }: ChartNoticeProps) => {
   return (
     <ChartNoticeBox>
-      {selectedInfo.map((major: MajorInfo, id: number) =>
+      {majorNoticeType ? (
+        <MajorChartNotice noticeResource={selectedInfo as MajorInfo[]} />
+      ) : (
+        <GeneralChartNotice noticeResource={selectedInfo as string[]} />
+      )}
+    </ChartNoticeBox>
+  )
+}
+
+const MajorChartNotice = ({
+  noticeResource,
+}: {
+  noticeResource: MajorInfo[]
+}) => {
+  return (
+    <>
+      {noticeResource.map((major: MajorInfo, id: number) =>
         major.notice ? (
           <ChartNoticeContent key={id}>
             <ChartNoticeTitle>{major.name} 지원 유의사항</ChartNoticeTitle>
@@ -60,7 +77,28 @@ const ChartNotice = ({ selectedInfo }: ChartNoticeProps) => {
           </ChartNoticeContent>
         ) : null,
       )}
-    </ChartNoticeBox>
+    </>
+  )
+}
+
+const GeneralChartNotice = ({
+  noticeResource,
+}: {
+  noticeResource: string[]
+}) => {
+  return (
+    <>
+      <ChartNoticeContent>
+        <ChartNoticeTitle>유의사항</ChartNoticeTitle>
+        <div>
+          {noticeResource.map((notice: string, idx: number) => (
+            <ChartNoticeSection key={idx}>
+              {idx + 1}. {notice}
+            </ChartNoticeSection>
+          ))}
+        </div>
+      </ChartNoticeContent>
+    </>
   )
 }
 
