@@ -60,7 +60,6 @@ const reducer = (state: State = initialState, action: Action) => {
       const baData: baParsingResult = baTarget.find((elem: baParsingResult) => {
         return elem.semester === semester
       })
-      console.log(baData)
       return {
         ...state,
         baData: baData,

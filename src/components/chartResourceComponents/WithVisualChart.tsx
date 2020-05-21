@@ -27,7 +27,7 @@ export const MajorChart = ({ direction, chart }: ChartData) => {
     <BarChartWrap>
       <BarChartLegendWrap>
         {direction.map((bar: ChartDirection, idx: number) => (
-          <BarChartLegend>
+          <BarChartLegend key={idx}>
             <LegendColorBox color={bar.color}></LegendColorBox>
             <span>{bar.title}</span>
           </BarChartLegend>
@@ -74,7 +74,7 @@ export const BaChart = ({ direction, chart }: ChartData) => {
     <BarChartWrap>
       <BarChartLegendWrap>
         {direction.map((bar: ChartDirection, idx: number) => (
-          <BarChartLegend>
+          <BarChartLegend key={idx}>
             <LegendColorBox color={bar.color}></LegendColorBox>
             <span>{bar.title}</span>
           </BarChartLegend>

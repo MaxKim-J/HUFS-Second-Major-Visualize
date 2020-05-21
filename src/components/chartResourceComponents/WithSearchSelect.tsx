@@ -17,8 +17,8 @@ const WithSearchSelect = ({
   return (
     <div className="chart-search">
       <ChartMajorBoxes>
-        {themeArr.map((theme: ThemeInfo) => (
-          <span onClick={() => callFunction(theme.name)}>
+        {themeArr.map((theme: ThemeInfo, idx: number) => (
+          <span key={idx} onClick={() => callFunction(theme.name)}>
             <ChartMajorBox
               major={theme.name}
               icon={useIcon ? theme.icon : null}

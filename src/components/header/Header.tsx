@@ -63,8 +63,10 @@ const Header = ({ admissionArr, onGetDataByInput, showArrow }: headerProps) => {
               }
             >
               <option value="">학번 선택</option>
-              {admissionArr.map(admission => (
-                <option value={admission}>{admission}</option>
+              {admissionArr.map((admission, idx) => (
+                <option key={idx} value={admission}>
+                  {admission}
+                </option>
               ))}
             </HeaderInputSelect>
           </InputSelect>

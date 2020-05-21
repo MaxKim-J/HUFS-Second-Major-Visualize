@@ -14,18 +14,6 @@ const shakeEffectLarge = keyframes`
     }
 `
 
-const shakeEffectSmall = keyframes`
-    0% {
-        top:7rem;
-    }
-    50%{
-        top:6.1rem;
-    }
-    100% {
-        top:7rem;
-    }
-`
-
 const HeaderArrowText = styled.div`
   padding: 0.2rem 0.4rem;
   font-weight: 700;

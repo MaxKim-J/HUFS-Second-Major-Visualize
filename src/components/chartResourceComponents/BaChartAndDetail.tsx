@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { baParsingResult } from '../../../@types/baData'
 import ChartWithVisualChart from '../chartResourceComponents/ChartWithVisualChart'
 import { BarChartWrap } from '../../style/styledComponents/barChart'
