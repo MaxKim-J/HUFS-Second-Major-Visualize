@@ -23,12 +23,12 @@ type headerProps = {
 
 const Header = ({ admissionArr, onGetDataByInput, showArrow }: headerProps) => {
   const [input, setInput] = useState({
-    admission: 0,
+    admission: '',
     campusName: '',
   })
 
   const handleInput = (event: React.ChangeEvent<HTMLSelectElement>): void => {
-    const { name, value } = event.target
+    let { name, value } = event.target
     setInput({ ...input, [name]: value })
   }
 
@@ -73,7 +73,7 @@ const Header = ({ admissionArr, onGetDataByInput, showArrow }: headerProps) => {
           <InputBtn
             onClick={() => {
               const { campusName, admission } = input
-              onGetDataByInput(campusName, admission)
+              onGetDataByInput(campusName, parseInt(admission))
             }}
           >
             시작
