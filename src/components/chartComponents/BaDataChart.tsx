@@ -2,8 +2,8 @@ import React from 'react'
 import ChartTitle from '../chartResourceComponents/ChartTitle'
 import { baParsingResult } from '../../../@types/baData'
 import BaWithSearchSelect from '../chartResourceComponents/BaWithSearchSelect'
-import ChartVisualBarChart from '../chartResourceComponents/ChartVisualBarChart'
 import ChartNotice from '../chartResourceComponents/ChartNotice'
+import BaChartAndDetail from '../chartResourceComponents/BaChartAndDetail'
 import baNotice from '../../config/baNotice'
 
 type BaDataChartProps = {
@@ -12,8 +12,6 @@ type BaDataChartProps = {
 }
 
 const BaDataChart = ({ baData, onGetBaDataByInput }: BaDataChartProps) => {
-  //todo 이외 데이터 표시해주는 새 컴포넌트를 만들어야함 + 이 컴포넌트에서 데이터를 global과 perAdmission으로 나눠 내려주기
-  console.log(baData)
   return (
     <>
       <ChartTitle
@@ -23,10 +21,7 @@ const BaDataChart = ({ baData, onGetBaDataByInput }: BaDataChartProps) => {
         }
       />
       <BaWithSearchSelect onGetBaDataByInput={onGetBaDataByInput} />
-      <ChartVisualBarChart
-        selectedInfo={baData.passPerAdmission}
-        chartType={'ba'}
-      />
+      <BaChartAndDetail baData={baData} />
       <ChartNotice
         selectedInfo={baNotice as string[]}
         majorNoticeType={false}

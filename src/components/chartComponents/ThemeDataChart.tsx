@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/majorData'
 import ChartTitle from '../chartResourceComponents/ChartTitle'
-import ChartVisualBarChart from '../chartResourceComponents/ChartVisualBarChart'
+import ChartWithVisualChart from '../chartResourceComponents/ChartWithVisualChart'
 import ChartNotice from '../chartResourceComponents/ChartNotice'
 import ThemeWithSearchSelect from '../chartResourceComponents/ThemeWithSearchSelect'
 
@@ -34,7 +34,7 @@ const ThemeDataChart = ({ majorData, campusName }: ThemeDataChartProps) => {
         majorData={majorData}
         updateSelectedThemeInfo={updateSelectedThemeInfo}
       />
-      <ChartVisualBarChart
+      <ChartWithVisualChart
         selectedInfo={selectedThemeInfo}
         chartType={'major'}
       />
