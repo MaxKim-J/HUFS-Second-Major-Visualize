@@ -19,14 +19,32 @@ const BaDetailContentPart = styled.div`
   width: 25%;
   text-align: center;
 `
+const BaDetailLine = styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: #e2e2e2;
+  border-radius: 50%;
+`
 
 const BaDetailPartTitle = styled.div`
   @media screen and (max-width: 750px) {
-    font-size: 0.6rem;
+    font-size: 13px;
   }
 
   @media screen and (max-width: 420px) {
-    font-size: 0.2rem;
+    font-size: 13px;
+  }
+`
+
+const BaDetailTitle = styled.div`
+  font-weight: 700;
+  margin: 0.3rem 0;
+  @media screen and (max-width: 750px) {
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 13px;
   }
 `
 
@@ -34,10 +52,10 @@ const BaDetailPartContent = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
   @media screen and (max-width: 750px) {
-    font-size: 0.7rem;
+    font-size: 12px;
   }
   @media screen and (max-width: 420px) {
-    font-size: 0.2rem;
+    font-size: 12px;
   }
 `
 
@@ -57,11 +75,11 @@ const BaChartAndDetail = ({ baData }: BaChartDetailProps) => {
       <ChartWithVisualChart selectedInfo={passPerAdmission} chartType={'ba'} />
       {passPerAdmission ? (
         <BarChartWrap>
+          <div>
+            <BaDetailTitle>선택학기 : {semester}</BaDetailTitle>
+            <BaDetailLine />
+          </div>
           <BaDetailContent>
-            <BaDetailContentPart>
-              <BaDetailPartTitle>선택학기</BaDetailPartTitle>
-              <BaDetailPartContent>{semester}</BaDetailPartContent>
-            </BaDetailContentPart>
             <BaDetailContentPart>
               <BaDetailPartTitle>합격점수</BaDetailPartTitle>
               <BaDetailPartContent>{passScore}/60</BaDetailPartContent>
