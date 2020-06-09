@@ -1,7 +1,7 @@
 import React from 'react'
-import ChartMajorBox from './ChartMajorBox'
-import { ChartMajorBoxes } from '../../style/styledComponents/majorBoxes'
-import { ThemeInfo } from '../../config/themes'
+import ChartMajorBox from '../ChartMajorBox'
+import { ChartMajorBoxes } from '../../../style/styledComponents/majorBoxes'
+import { ThemeInfo } from '../../../config/themes'
 
 type WithSearchSelectProps = {
   themeArr: ThemeInfo[]

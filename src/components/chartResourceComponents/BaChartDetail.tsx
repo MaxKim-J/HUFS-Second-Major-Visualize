@@ -1,6 +1,5 @@
 import React from 'react'
 import { baParsingResult } from '../../../@types/baData'
-import ChartWithVisualChart from '../chartResourceComponents/ChartWithVisualChart'
 import { BarChartWrap } from '../../style/styledComponents/barChart'
 import styled from 'styled-components'
 
@@ -60,20 +59,12 @@ const BaDetailPartContent = styled.div`
 `
 
 const BaChartAndDetail = ({ baData }: BaChartDetailProps) => {
-  const {
-    semester,
-    passScore,
-    averageScore,
-    examPasser,
-    examTaker,
-    passPerAdmission,
-  } = baData
+  const { semester, passScore, averageScore, examPasser, examTaker } = baData
   const passRatio = ((examPasser / examTaker) * 100).toFixed(1)
 
   return (
     <>
-      <ChartWithVisualChart selectedInfo={passPerAdmission} chartType={'ba'} />
-      {passPerAdmission ? (
+      {baData.semester && (
         <BarChartWrap>
           <div>
             <BaDetailTitle>선택학기 : {semester}</BaDetailTitle>
@@ -100,7 +91,7 @@ const BaChartAndDetail = ({ baData }: BaChartDetailProps) => {
             </BaDetailContentPart>
           </BaDetailContent>
         </BarChartWrap>
-      ) : null}
+      )}
     </>
   )
 }

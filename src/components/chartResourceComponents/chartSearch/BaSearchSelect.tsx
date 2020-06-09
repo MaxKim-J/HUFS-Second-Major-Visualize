@@ -1,6 +1,6 @@
 import React from 'react'
-import { semesterTheme } from '../../config/themes'
-import WithSearchSelect from './WithSearchSelect'
+import { semesterTheme } from '../../../config/themes'
+import SearchSelect from './SearchSelect'
 
 type BaWithSearchSelectProps = {
   onGetBaDataByInput: (semester: string) => void
@@ -14,7 +14,7 @@ const BaWithSearchSelect = ({
   }
 
   return (
-    <WithSearchSelect
+    <SearchSelect
       useIcon={true}
       themeArr={semesterTheme}
       callFunction={setSelectedSemester}
