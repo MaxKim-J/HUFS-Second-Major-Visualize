@@ -51,9 +51,7 @@ const AppLayoutContainer = () => {
           </Suspense>
         </>
       ) : (
-        <div className="default">
-          <DefaultContent />
-        </div>
+        <DefaultContent />
       )}
     </Content>
   )
