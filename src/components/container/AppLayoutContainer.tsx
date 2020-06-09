@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../reducer'
 import { State } from '../../../@types/reducer.d'
 import styled from 'styled-components'
+import DefaultContent from '../default/DefaultContent'
 
-type AppLayoutContainerProps = {
-  header?: JSX.Element
-  allDataChart: JSX.Element
-  themeDataChart: JSX.Element
-  baDataChart: JSX.Element
-  defaultContent: JSX.Element
-}
+const AllDataChartContainer = React.lazy(() =>
+  import('./AllDataChartContainer'),
+)
+const ThemeDataChartContainer = React.lazy(() =>
+  import('./ThemeDataChartContainer'),
+)
+const BaDataChartContainer = React.lazy(() => import('./BaDataChartConatainer'))
 
 const Content = styled.div`
   padding-top: 7rem;
@@ -30,24 +31,29 @@ const Chart = styled.div`
   border-radius: 20px;
 `
 
-const AppLayoutContainer = ({
-  allDataChart,
-  themeDataChart,
-  defaultContent,
-  baDataChart,
-}: AppLayoutContainerProps) => {
+const AppLayoutContainer = () => {
   const data: State = useSelector((state: RootState) => state.data)
 
   return (
     <Content>
       {data.campusName ? (
         <>
-          <Chart>{themeDataChart}</Chart>
-          <Chart>{allDataChart}</Chart>
-          <Chart>{baDataChart}</Chart>
+          <Suspense fallback={<DefaultContent />}>
+            <Chart>
+              <AllDataChartContainer />
+            </Chart>
+            <Chart>
+              <ThemeDataChartContainer />
+            </Chart>
+            <Chart>
+              <BaDataChartContainer />
+            </Chart>
+          </Suspense>
         </>
       ) : (
-        <div className="default">{defaultContent}</div>
+        <div className="default">
+          <DefaultContent />
+        </div>
       )}
     </Content>
   )
