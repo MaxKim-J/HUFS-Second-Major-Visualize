@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { MajorInfo } from '../../../@types/majorData'
 import ChartTitle from '../chartResourceComponents/ChartTitle'
-import ChartSearchCompare from '../chartResourceComponents/ChartSearchCompare'
-import ChartWithVisualChart from '../chartResourceComponents/ChartWithVisualChart'
+import AllSearchSelect from '../chartResourceComponents/chartSearch/AllSearchSelect'
+import MainChart from '../chartResourceComponents/mainCharts/MainChart'
 import ChartNotice from '../chartResourceComponents/ChartNotice'
 
 type AllDataChartProps = {
@@ -36,13 +36,13 @@ const AllDataChart = ({ majorData, campusName }: AllDataChartProps) => {
           '선택한 캠퍼스, 학번에 해당하는 이중전공 여석을 조회합니다(비교 학과는 3개까지 선택할 수 있습니다)'
         }
       />
-      <ChartSearchCompare
+      <AllSearchSelect
         majorData={majorData}
         campusName={campusName}
         selectedInfo={selectedInfo}
         updateSelectedInfo={updateSelectedInfo}
       />
-      <ChartWithVisualChart selectedInfo={selectedInfo} chartType={'major'} />
+      <MainChart selectedInfo={selectedInfo} chartType={'major'} />
       <ChartNotice selectedInfo={selectedInfo} majorNoticeType={true} />
     </>
   )

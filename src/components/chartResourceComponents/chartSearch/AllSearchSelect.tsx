@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../../@types/majorData'
-import { seoulCollege, globalCollege } from '../../config/colleges'
-import updateMajorInput from '../../utils/updateMajorInput'
-import searchMajor from '../../utils/searchMajor'
-import ChartMajorBox from './ChartMajorBox'
-import { ChartMajorBoxes } from '../../style/styledComponents/majorBoxes'
+import { MajorInfo } from '../../../../@types/majorData'
+import { seoulCollege, globalCollege } from '../../../config/colleges'
+import updateMajorInput from '../../../utils/updateMajorInput'
+import searchMajor from '../../../utils/searchMajor'
+import ChartMajorBox from '../ChartMajorBox'
+import { ChartMajorBoxes } from '../../../style/styledComponents/majorBoxes'
 import {
   InputSelect,
   InputBtn,
   InputBoxes,
-} from '../../style/styledComponents/input'
+} from '../../../style/styledComponents/input'
 
 type ChartSearchCompareProps = {
   campusName: string

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { ChartData, ChartDirection } from '../../../@types/barChart'
-import { InputBtn } from '../../style/styledComponents/input'
+import { ChartData, ChartDirection } from '../../../../@types/barChart'
+import { InputBtn } from '../../../style/styledComponents/input'
 
 import {
   BarChartWrap,
@@ -8,7 +8,7 @@ import {
   BarChartLegendWrap,
   LegendColorBox,
   ChartBtn,
-} from '../../style/styledComponents/barChart'
+} from '../../../style/styledComponents/barChart'
 
 import {
   Bar,
