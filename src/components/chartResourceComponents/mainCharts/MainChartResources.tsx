@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { ChartData, ChartDirection } from '../../../@types/barChart'
-import { InputBtn } from '../../style/styledComponents/input'
+import { ChartData, ChartDirection } from '../../../../@types/barChart'
+import { InputBtn } from '../../../style/styledComponents/input'
 
 import {
   BarChartWrap,
@@ -8,7 +8,7 @@ import {
   BarChartLegendWrap,
   LegendColorBox,
   ChartBtn,
-} from '../../style/styledComponents/barChart'
+} from '../../../style/styledComponents/barChart'
 
 import {
   Bar,
@@ -27,7 +27,7 @@ export const MajorChart = ({ direction, chart }: ChartData) => {
     <BarChartWrap>
       <BarChartLegendWrap>
         {direction.map((bar: ChartDirection, idx: number) => (
-          <BarChartLegend>
+          <BarChartLegend key={idx}>
             <LegendColorBox color={bar.color}></LegendColorBox>
             <span>{bar.title}</span>
           </BarChartLegend>
@@ -74,7 +74,7 @@ export const BaChart = ({ direction, chart }: ChartData) => {
     <BarChartWrap>
       <BarChartLegendWrap>
         {direction.map((bar: ChartDirection, idx: number) => (
-          <BarChartLegend>
+          <BarChartLegend key={idx}>
             <LegendColorBox color={bar.color}></LegendColorBox>
             <span>{bar.title}</span>
           </BarChartLegend>

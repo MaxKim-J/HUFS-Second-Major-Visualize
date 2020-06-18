@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../../@types/majorData'
-import { seoulCollege, globalCollege } from '../../config/colleges'
-import updateMajorInput from '../../utils/updateMajorInput'
-import searchMajor from '../../utils/searchMajor'
-import ChartMajorBox from './ChartMajorBox'
-import { ChartMajorBoxes } from '../../style/styledComponents/majorBoxes'
+import { MajorInfo } from '../../../../@types/majorData'
+import { seoulCollege, globalCollege } from '../../../config/colleges'
+import updateMajorInput from '../../../utils/updateMajorInput'
+import searchMajor from '../../../utils/searchMajor'
+import ChartMajorBox from '../ChartMajorBox'
+import { ChartMajorBoxes } from '../../../style/styledComponents/majorBoxes'
 import {
   InputSelect,
   InputBtn,
   InputBoxes,
-} from '../../style/styledComponents/input'
+} from '../../../style/styledComponents/input'
 
 type ChartSearchCompareProps = {
   campusName: string
@@ -77,8 +77,10 @@ const ChartSearchCompare = ({
             }}
           >
             <option value="">단과대 선택</option>
-            {collegeArr.map((college: string) => (
-              <option value={college}>{college}</option>
+            {collegeArr.map((college: string, idx: number) => (
+              <option key={idx} value={college}>
+                {college}
+              </option>
             ))}
           </select>
         </InputSelect>
@@ -94,8 +96,10 @@ const ChartSearchCompare = ({
             }
           >
             <option value="">학과선택</option>
-            {majorArr.map((major: string) => (
-              <option value={major}>{major}</option>
+            {majorArr.map((major: string, idx: number) => (
+              <option key={idx} value={major}>
+                {major}
+              </option>
             ))}
           </select>
         </InputSelect>
@@ -112,8 +116,9 @@ const ChartSearchCompare = ({
       </InputBoxes>
       {/*학과 박스*/}
       <ChartMajorBoxes>
-        {selectedInfo.map((major: MajorInfo) => (
+        {selectedInfo.map((major: MajorInfo, idx: number) => (
           <ChartMajorBox
+            key={idx}
             major={major.name}
             cancelFunction={removeSelectedInfo}
           />

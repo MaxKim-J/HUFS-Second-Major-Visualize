@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { MajorInfo } from '../../../@types/majorData'
-import { ChartData } from '../../../@types/barChart'
-import { MajorChart, BaChart } from './WithVisualChart'
-import { getMajorChartData, getBaChartData } from '../../utils/getChartData'
-import { passPerAdmission, baParsingResult } from '../../../@types/baData'
+import { MajorInfo } from '../../../../@types/majorData'
+import { ChartData } from '../../../../@types/barChart'
+import { MajorChart, BaChart } from './MainChartResources'
+import { getMajorChartData, getBaChartData } from '../../../utils/getChartData'
+import { passPerAdmission, baParsingResult } from '../../../../@types/baData'
 
 type ChartVisualBarChartProps = {
   selectedInfo: MajorInfo[] | passPerAdmission[]

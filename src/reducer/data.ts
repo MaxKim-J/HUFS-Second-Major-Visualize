@@ -44,8 +44,7 @@ const reducer = (state: State = initialState, action: Action) => {
       const target = require(`./data/${campusName}.json`)
       const searchedTarget: ParsingResult = target.find(
         (elem: ParsingResult) => {
-          //! 여기 타입 왜이러지
-          return elem.admission == admission
+          return elem.admission === admission
         },
       )
       return {
@@ -60,7 +59,6 @@ const reducer = (state: State = initialState, action: Action) => {
       const baData: baParsingResult = baTarget.find((elem: baParsingResult) => {
         return elem.semester === semester
       })
-      console.log(baData)
       return {
         ...state,
         baData: baData,

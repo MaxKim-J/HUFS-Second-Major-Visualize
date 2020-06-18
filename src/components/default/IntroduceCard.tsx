@@ -45,8 +45,8 @@ const IntroduceCard = ({ title, emoji, contents }: Introduce) => {
         <Emoji label="intro" emoji={emoji} />
       </CardLogo>
       <CardTitle>{title}</CardTitle>
-      {contents.map(content => (
-        <CardContent>{content}</CardContent>
+      {contents.map((content, idx) => (
+        <CardContent key={idx}>{content}</CardContent>
       ))}
     </CardWrap>
   )

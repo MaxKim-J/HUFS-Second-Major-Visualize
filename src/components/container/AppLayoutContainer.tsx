@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../reducer'
 import { State } from '../../../@types/reducer.d'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import DefaultContent from '../default/DefaultContent'
 
-type AppLayoutContainerProps = {
-  header?: JSX.Element
-  allDataChart: JSX.Element
-  themeDataChart: JSX.Element
-  baDataChart: JSX.Element
-  defaultContent: JSX.Element
-}
+const boxFade = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
 
 const Content = styled.div`
   padding-top: 7rem;
@@ -21,33 +23,41 @@ const Content = styled.div`
   @media screen and (max-width: 750px) {
     padding-top: 9rem;
   }
+  animation: ${boxFade} 1s 0s 1 linear alternate;
 `
-
 const Chart = styled.div`
   margin-bottom: 1.5rem;
   padding: 1rem;
   border: 2px solid #f4f4f4;
   border-radius: 20px;
+  animation: ${boxFade} 0.5s 0s 1 linear alternate;
 `
+const AllDataChartContainer = React.lazy(() =>
+  import('./AllDataChartContainer'),
+)
+const ThemeDataChartContainer = React.lazy(() =>
+  import('./ThemeDataChartContainer'),
+)
+const BaDataChartContainer = React.lazy(() => import('./BaDataChartConatainer'))
 
-const AppLayoutContainer = ({
-  allDataChart,
-  themeDataChart,
-  defaultContent,
-  baDataChart,
-}: AppLayoutContainerProps) => {
+const AppLayoutContainer = () => {
   const data: State = useSelector((state: RootState) => state.data)
 
+  const charts: JSX.Element[] = [
+    <AllDataChartContainer />,
+    <ThemeDataChartContainer />,
+    <BaDataChartContainer />,
+  ]
   return (
     <Content>
       {data.campusName ? (
-        <>
-          <Chart>{themeDataChart}</Chart>
-          <Chart>{allDataChart}</Chart>
-          <Chart>{baDataChart}</Chart>
-        </>
+        <Suspense fallback={<div></div>}>
+          {charts.map(chart => (
+            <Chart>{chart}</Chart>
+          ))}
+        </Suspense>
       ) : (
-        <div className="default">{defaultContent}</div>
+        <DefaultContent />
       )}
     </Content>
   )

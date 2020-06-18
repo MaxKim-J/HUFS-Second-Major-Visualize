@@ -50,7 +50,6 @@ export const getBaChartData = (selectedInfo: passPerAdmission[]): ChartData => {
 export const getMajorChartData = (selectedInfo: MajorInfo[]): ChartData => {
   let chartSection: ChartSection[] = []
   let direction: ChartDirection[] = []
-  console.log(selectedInfo)
 
   selectedInfo.forEach((major: MajorInfo, idx: number) => {
     direction = [
